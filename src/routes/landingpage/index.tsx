@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-export default function Portfolio() {
+export default function LandingPage() {
   const testProjects = [
     {
       title: "Project 1",
@@ -19,11 +19,13 @@ export default function Portfolio() {
   ];
 
   return (
-    <>
+    <main>
       {testProjects.length &&
         testProjects.map((project) => (
-          <Link to={"/project/" + project.slug}>{project.title}</Link>
+          <p>
+            <Link to={"/project/" + project.slug}>{project.title}</Link>
+          </p>
         ))}
-    </>
+    </main>
   );
 }
