@@ -1,4 +1,78 @@
 /******* Variables *******/
+:root {
+    /* Colors */
+    --color-bg: #0a0a0a;
+    --color-surface: #171717;
+    --color-text: #f5f5f5;
+    --color-text-muted: #a1a1a1;
+
+    --color-accent: #fbbf24;
+    --color-accent-strong: #d97706;
+
+    /* Semantic / Category Accents */
+    --color-info: #b8b5ff;
+    --color-success: #6ee7b7;
+    --color-warning: #fdba74;
+
+    /* Borders & Focus */
+    --color-border: #ffffff1a;
+    --color-border-strong: #ffffff29;
+    --color-focus: var(--color-accent);
+
+    /* Typography */
+    --font-sans: "Inter Display", system-ui, sans-serif;
+    --font-display: "Space Grotesk", system-ui, sans-serif;
+    --font-mono: ui-monospace, monospace;
+
+    --text-xs: 0.75rem; /* 12px - labels, badges */
+    --text-sm: 0.875rem; /* 14px - secondary UI */
+    --text-base: 1rem; /* 16px - body copy */
+    --text-lg: 1.25rem; /* 20px - card titles */
+    --text-xl: 1.75rem; /* 28px - section headings */
+    --text-2xl: 3rem; /* 48px - display / hero */
+
+    --leading-tight: 1.1;
+    --leading-snug: 1.35;
+    --leading-normal: 1.6;
+
+    /* Spacing Scale */
+    --space-xs: 0.25rem; /* 4px */
+    --space-sm: 0.5rem; /* 8px */
+    --space-md: 1rem; /* 16px */
+    --space-lg: 1.5rem; /* 24px */
+    --space-xl: 2.5rem; /* 40px */
+    --space-2xl: 3.5rem; /* 56px */
+
+    /* Layout */
+    --container-max: 50rem;
+    --sidebar-width: 20rem;
+    --viewport-h: 100vh;
+
+    /* Borders, Radii & Gradients */
+    --border-thin: 2px;
+    --border-thick: 3px;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+
+    --gradient-surface: linear-gradient(
+        135deg,
+        var(--color-bg) 0%,
+        var(--color-surface) 100%
+    );
+    --gradient-accent: linear-gradient(
+        90deg,
+        var(--color-accent) 10%,
+        var(--color-accent-strong) 100%
+    );
+}
+
+@supports (height: 100dvh) {
+    :root {
+        --viewport-h: 100dvh;
+    }
+}
 
 /******* Reset *******/
 /* 1. Predictable box sizing */
@@ -83,8 +157,9 @@ table {
 
 /******* Base styles *******/
 html {
-    font-family: sans-serif;
     padding: 2rem;
+    background: var(--gradient-surface);
+    color: var(--color-text);
 }
 
 h1,
