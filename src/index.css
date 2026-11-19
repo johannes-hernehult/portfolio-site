@@ -172,8 +172,6 @@ html {
 nav {
     grid-column: 1 / 2;
     grid-row: span 2;
-
-    background-color: #11bb2220;
 }
 
 main {
@@ -207,7 +205,6 @@ h6 {
     margin-bottom: 0.5em;
     font-family: var(--font-display);
     width: 100%;
-    max-width: 30ch;
 }
 
 h1 {
@@ -216,9 +213,16 @@ h1 {
 }
 h2 {
     font-size: var(--text-xl);
+    max-width: 30ch;
 }
 h3 {
     font-size: var(--text-lg);
+    max-width: 20ch;
+}
+
+h4{
+    font-size: var(--text-md);
+    max-width: 12ch;
 }
 
 h2::after,
