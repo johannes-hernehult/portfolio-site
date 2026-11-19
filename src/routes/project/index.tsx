@@ -1,7 +1,13 @@
 import { useParams, Navigate } from "react-router";
 import { Contact } from "../../features/components/contact";
-import { Gallery, Hero, Highlights, Overview, ProjectCta, projects } from "../../features/project";
-
+import {
+  Gallery,
+  Hero,
+  Highlights,
+  Overview,
+  ProjectCta,
+  projects,
+} from "../../features/project";
 
 function ProjectPage() {
   const { slug } = useParams();
@@ -31,7 +37,7 @@ function ProjectPage() {
       <Highlights project={project} />
 
       {/* 5. Bottom CTA: Repeat Live/Repo links + "Next Project" navigation */}
-      <ProjectCta project={project} nextProject={nextProject} />
+      <ProjectCta project={project} projects={projects} />
 
       <Contact />
     </main>
