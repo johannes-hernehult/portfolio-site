@@ -3,18 +3,20 @@ import "./App.css";
 import ProjectPage from "./routes/project";
 import LandingPage from "./routes/landingpage";
 import CVPage from "./routes/cv";
-import Navigation from "./features/navigation/Navigation";
+import { Navbar } from "./features/components/navigation";
+import { Footer } from "./features/components/footer/Footer";
 
 export default function App() {
   return (
     <>
-      <Navigation />
+      <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/project/:slug" element={<ProjectPage />} />
         <Route path="/cv" element={<CVPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }
