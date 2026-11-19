@@ -188,9 +188,13 @@ footer {
     height: 100%;
     display: grid;
     place-items: center;
-
     text-align: center;
     padding: var(--space-sm);
+}
+
+main > section {
+    padding-inline: var(--space-2xl);
+    padding-block: var(--space-md);
 }
 
 h1,
@@ -199,9 +203,35 @@ h3,
 h4,
 h5,
 h6 {
+    position: relative;
     margin-bottom: 0.2em;
-    font-size: var(--text-2xl);
     font-family: var(--font-display);
+    width: 100%;
+    max-width: 30ch;
+}
+
+h1 {
+    font-size: var(--text-2xl);
+    text-align: center;
+}
+h2 {
+    font-size: var(--text-xl);
+}
+h3 {
+    font-size: var(--text-lg);
+}
+
+h2::after,
+h3::after,
+h4::after {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    bottom: -0.2em;
+    height: var(--border-thin);
+    content: "";
+    background: var(--gradient-accent);
+    opacity: var(--opacity-heading-decoration);
 }
 
 p {
