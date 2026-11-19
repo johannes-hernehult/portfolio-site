@@ -95,8 +95,6 @@ html {
 
 /* 4. Accessible line-height, full viewport height, and crisp text */
 body {
-    min-height: 100vh;
-    min-height: 100dvh;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
@@ -153,13 +151,24 @@ table {
 /* 9. Dedicated stacking context so portals/modals never fight app z-indexes */
 #root {
     isolation: isolate;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 /******* Base styles *******/
 html {
-    padding: 2rem;
-    background: var(--gradient-surface);
     color: var(--color-text);
+}
+
+#root {
+    background: var(--gradient-surface);
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
 }
 
 h1,
@@ -174,4 +183,15 @@ h6 {
 p {
     max-width: 80ch;
     margin-bottom: 2em;
+}
+
+a {
+    color: var(--color-text);
+}
+a:hover {
+    color: var(--color-accent);
+}
+
+button{
+    color: var(--color-surface);
 }

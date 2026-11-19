@@ -1,31 +1,18 @@
-import { Link } from "react-router";
+import { Hero } from "../../features/landingpage";
 
 export default function LandingPage() {
-  const testProjects = [
-    {
-      title: "Project 1",
-      slug: "project-1",
-    },
 
-    {
-      title: "Project 2",
-      slug: "project-2",
-    },
-
-    {
-      title: "Project 3",
-      slug: "project-3",
-    },
-  ];
 
   return (
-    <main>
-      {testProjects.length &&
-        testProjects.map((project) => (
-          <p>
-            <Link to={"/project/" + project.slug}>{project.title}</Link>
-          </p>
-        ))}
+    <main className="landing-page">
+      {/*Hero*/}
+      <Hero />
+      {/*About*/}
+      {/*Skills and tech*/}
+      {/*Projects*/}
+      {/*Experiences*/}
+      {/*FAQ - Five Arguable Qualities*/}
+      {/*Contact*/}
     </main>
   );
 }
