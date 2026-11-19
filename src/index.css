@@ -204,7 +204,7 @@ h4,
 h5,
 h6 {
     position: relative;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
     font-family: var(--font-display);
     width: 100%;
     max-width: 30ch;
@@ -236,7 +236,7 @@ h4::after {
 
 p {
     max-width: 80ch;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 a {
