@@ -6,15 +6,21 @@ interface HeroProps {
 }
 
 export function Hero({ project }: HeroProps) {
+  const { title, images, links, summary, tags, role } = project;
   return (
-    <section className={styles.hero}>
-      <h1>{project.title}</h1>
-      <p>{project.summary}</p>
-      {project.links.live && <a href={project.links.live}>Live Link</a>}
-      {project.links.repo && <a href={project.links.repo}>Repo Link</a>}
-      <span>{project.role}</span>
+    <section
+      className={styles.hero}
+      style={{
+        backgroundImage: images[0] ? `url(${images[0].src})` : undefined,
+      }}
+    >
+      <h1>{title}</h1>
+      <p>{summary}</p>
+      {links.live && <a href={links.live}>Live Link</a>}
+      {links.repo && <a href={links.repo}>Repo Link</a>}
+      <span>{role}</span>
       <ul>
-        {project.tags.map((tag) => (
+        {tags.map((tag) => (
           <li key={tag}>{tag}</li>
         ))}
       </ul>
