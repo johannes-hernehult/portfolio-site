@@ -6,6 +6,7 @@ import {
   Projects,
   Experiences,
   Faq,
+  experiences,
 } from "../../features/landingpage";
 
 export default function LandingPage() {
@@ -15,7 +16,7 @@ export default function LandingPage() {
       <About />
       <SkillsAndTech />
       <Projects />
-      <Experiences />
+      <Experiences experiences={experiences} />
       <Faq />
       <Contact />
     </main>

@@ -4,3 +4,11 @@ export { SkillsAndTech } from "./skills-and-tech/SkillsAndTech";
 export { Projects } from "./projects/Projects";
 export { Experiences } from "./experiences/Experiences";
 export { Faq } from "./faq/Faq";
+
+export { experiences } from "./MockData";
+
+export type {
+  ExperienceCategory,
+  ExperienceDiscipline,
+  Experience,
+} from "./types";
