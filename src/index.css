@@ -193,6 +193,7 @@ footer {
 main > section {
     padding-inline: var(--space-2xl);
     padding-block: var(--space-md);
+    max-width: 1280px;
 }
 
 h1,
@@ -202,9 +203,9 @@ h4,
 h5,
 h6 {
     position: relative;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
     font-family: var(--font-display);
-    width: 100%;
+    width: fit-content;
 }
 
 h1 {
@@ -213,16 +214,13 @@ h1 {
 }
 h2 {
     font-size: var(--text-xl);
-    max-width: 30ch;
 }
 h3 {
     font-size: var(--text-lg);
-    max-width: 20ch;
 }
 
 h4 {
     font-size: var(--text-md);
-    max-width: 12ch;
 }
 
 h2::after,
@@ -235,7 +233,7 @@ h4::after {
     height: var(--border-thin);
     content: "";
     background: var(--gradient-accent);
-    opacity: var(--opacity-heading-decoration);
+    opacity: 0.75;
 }
 
 p {
