@@ -51,6 +51,7 @@
     /* Borders, Radii & Gradients */
     --border-thin: 2px;
     --border-thick: 3px;
+    --radius-xs: 0.125rem;
     --radius-sm: 0.375rem;
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
@@ -158,10 +159,11 @@ table {
 /******* Base styles *******/
 html {
     color: var(--color-text);
+    background: var(--gradient-surface);
+    font-family: var(--font-sans);
 }
 
 #root {
-    background: var(--gradient-surface);
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto var(--space-xl);
@@ -198,6 +200,8 @@ h4,
 h5,
 h6 {
     margin-bottom: 0.2em;
+    font-size: var(--text-2xl);
+    font-family: var(--font-display);
 }
 
 p {
@@ -214,6 +218,12 @@ a:hover {
 
 button {
     color: var(--color-surface);
+    padding-block: var(--space-sm);
+    padding-inline: var(--space-lg);
+    line-height: 1;
+    border-radius: var(--radius-xs);
+    border: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {
