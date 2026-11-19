@@ -2,6 +2,7 @@ import { useParams, Navigate } from "react-router";
 import { Contact } from "../../features/components/contact";
 import { Hero } from "../../features/project/hero/Hero";
 import { projects } from "../../features/project";
+import { Overview } from "../../features/project/overview/Overview";
 
 function ProjectPage() {
   const { slug } = useParams();
@@ -17,7 +18,7 @@ function ProjectPage() {
       {/* 1. Hero: Title, 1-sentence hook, Primary CTA (Live App / GitHub), Role & Tech Tags */}
       <Hero project={project} />
       {/* 2. Primary Visual / Interactive Preview or Gallery */}
-
+      <Overview project={project}/>
       {/* 3. Context & Overview: The problem, goal, and your specific contributions */}
 
       {/* 4. Top 3 Technical Highlights / Key Engineering Decisions */}

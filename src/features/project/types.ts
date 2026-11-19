@@ -4,7 +4,7 @@ export interface ProjectImage {
   src: string;
   alt: string;
   caption?: string;
-  tier: 'cover' | 'primary' | 'secondary';
+  order: number;
 }
 
 export interface ProjectLesson {
