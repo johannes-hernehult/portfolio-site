@@ -162,13 +162,33 @@ html {
 
 #root {
     background: var(--gradient-surface);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto var(--space-xl);
+}
+
+nav {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+
+    background-color: #11bb2220;
+}
+
+main {
+    grid-column: span 1;
     display: flex;
     flex-direction: column;
+    gap: var(--space-2xl);
 }
 
 footer {
-    margin-top: auto;
+    grid-column: 2 / 3;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
     text-align: center;
+    padding: var(--space-sm);
 }
 
 h1,
@@ -192,6 +212,26 @@ a:hover {
     color: var(--color-accent);
 }
 
-button{
+button {
     color: var(--color-surface);
+}
+
+@media screen and (max-width: 960px) {
+    #root {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    nav {
+
+        height: fit-content;
+
+        background-color: #11bb2220;
+    }
+
+    footer {
+        margin-top: auto;
+        max-height: 40px;
+    }
 }
