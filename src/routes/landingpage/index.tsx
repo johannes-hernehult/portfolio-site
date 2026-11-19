@@ -1,3 +1,4 @@
+import { Contact } from "../../features/components/contact";
 import {
   Hero,
   About,
@@ -5,7 +6,6 @@ import {
   Projects,
   Experiences,
   Faq,
-  Contact,
 } from "../../features/landingpage";
 
 export default function LandingPage() {

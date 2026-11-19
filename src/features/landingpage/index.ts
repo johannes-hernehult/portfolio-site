@@ -4,4 +4,3 @@ export { SkillsAndTech } from "./skills-and-tech/SkillsAndTech";
 export { Projects } from "./projects/Projects";
 export { Experiences } from "./experiences/Experiences";
 export { Faq } from "./faq/Faq";
-export { Contact } from "./contact/Contact";
