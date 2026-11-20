@@ -1,5 +1,6 @@
 export type Discipline = 'engineering' | '3d';
 
+/** Describes a project image and its position in the project gallery. */
 export interface ProjectImage {
   src: string;
   alt: string;
@@ -18,6 +19,7 @@ export interface ProjectLinks {
   video?: string;
 }
 
+/** Holds the content and links used to render a project detail page. */
 export interface Project {
   id: string;
   slug: string;

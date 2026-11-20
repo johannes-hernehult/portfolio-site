@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { Link } from "react-router";
 import { projects } from "../../project/MockData";
 
+/** Lists the projects available from the landing page. */
 export function Projects() {
   return (
     <section className={styles.projects} id="projects">

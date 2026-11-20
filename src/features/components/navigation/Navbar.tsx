@@ -8,6 +8,7 @@ const navLinks = [
   { hash: "#contact", label: "Contact" },
 ];
 
+/** Renders the site navigation and marks the current section link as active. */
 export function Navbar() {
   const activeIndex = useActiveNavLinkIndex();
 

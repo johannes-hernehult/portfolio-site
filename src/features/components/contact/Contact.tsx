@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import styles from "./styles.module.css";
 
+/** Renders the contact form and its submission state. */
 export function Contact() {
   const [isSending, setIsSending] = useState(false);
 

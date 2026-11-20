@@ -24,24 +24,24 @@
     --font-display: "Space Grotesk", system-ui, sans-serif;
     --font-mono: ui-monospace, monospace;
 
-    --text-xs: 0.75rem; /* 12px - labels, badges */
-    --text-sm: 0.875rem; /* 14px - secondary UI */
-    --text-base: 1rem; /* 16px - body copy */
-    --text-lg: 1.25rem; /* 20px - card titles */
-    --text-xl: 1.75rem; /* 28px - section headings */
-    --text-2xl: 3rem; /* 48px - display / hero */
+    --text-xs: 0.75rem; /* Labels and badges */
+    --text-sm: 0.875rem; /* Secondary UI */
+    --text-base: 1rem; /* Body copy */
+    --text-lg: 1.25rem; /* Card titles */
+    --text-xl: 1.75rem; /* Section headings */
+    --text-2xl: 3rem; /* Display and hero text */
 
     --leading-tight: 1.1;
     --leading-snug: 1.35;
     --leading-normal: 1.6;
 
     /* Spacing Scale */
-    --space-xs: 0.25rem; /* 4px */
-    --space-sm: 0.5rem; /* 8px */
-    --space-md: 1rem; /* 16px */
-    --space-lg: 1.5rem; /* 24px */
-    --space-xl: 2.5rem; /* 40px */
-    --space-2xl: 3.5rem; /* 56px */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2.5rem;
+    --space-2xl: 3.5rem;
 
     /* Layout */
     --container-max: 1280px;
@@ -77,19 +77,17 @@
 }
 
 /******* Reset *******/
-/* 1. Predictable box sizing */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* 2. Remove default margins */
 * {
     margin: 0;
 }
 
-/* 3. Prevent mobile browsers from arbitrarily inflating font sizes */
+/* Prevent mobile browsers from automatically enlarging text. */
 html {
     scroll-behavior: smooth;
     overscroll-behavior-y: none;
@@ -97,13 +95,11 @@ html {
     text-size-adjust: 100%;
 }
 
-/* 4. Accessible line-height, full viewport height, and crisp text */
 body {
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
-/* 5. Responsive media without inline baseline whitespace */
 img,
 picture,
 video,
@@ -113,7 +109,6 @@ svg {
     max-width: 100%;
 }
 
-/* 6. Force form controls to inherit typography instead of OS defaults */
 input,
 button,
 textarea,
@@ -122,7 +117,6 @@ select {
     color: inherit;
 }
 
-/* 7. Prevent long words from breaking layouts & balance line wrapping */
 p,
 h1,
 h2,
@@ -147,12 +141,11 @@ h6 {
     line-height: 1.2;
 }
 
-/* 8. Consistent table borders across browsers */
 table {
     border-collapse: collapse;
 }
 
-/* 9. Dedicated stacking context so portals/modals never fight app z-indexes */
+/* Keep the app's descendants in an isolated stacking context. */
 #root {
     isolation: isolate;
     min-height: 100vh;

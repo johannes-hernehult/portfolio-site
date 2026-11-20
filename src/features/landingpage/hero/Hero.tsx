@@ -1,5 +1,6 @@
 import styles from "./styles.module.css";
 
+/** Renders the landing page's introductory hero section. */
 export function Hero() {
   return (
     <section className={styles.hero}>

@@ -5,6 +5,7 @@ interface HeroProps {
   project: Project;
 }
 
+/** Displays the overview paragraphs for a project. */
 export function Overview({ project }: HeroProps) {
   const { overview } = project;
   const {} = project;

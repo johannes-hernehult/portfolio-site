@@ -5,6 +5,7 @@ interface GalleryProps {
   project: Project;
 }
 
+/** Displays the ordered, non-cover images for a project. */
 export function Gallery({ project }: GalleryProps) {
   const { images } = project;
   const galleryImages = images

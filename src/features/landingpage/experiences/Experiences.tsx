@@ -19,6 +19,7 @@ function formatDate(date: string | null): string {
   });
 }
 
+/** Displays experience entries ordered by their relevance rank. */
 export function Experiences({ experiences }: ExperiencesProps) {
   if (experiences.length === 0) return null;
 

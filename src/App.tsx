@@ -6,6 +6,7 @@ import LandingPage from "./routes/landingpage";
 import { Navbar } from "./features/components/navigation";
 import { Footer } from "./features/components/footer/Footer";
 
+/** Renders the application routes and shared navigation and footer. */
 export default function App() {
   const { pathname, hash } = useLocation();
 

@@ -8,6 +8,7 @@ import {
   experiences,
 } from "../../features/landingpage";
 
+/** Composes the landing page sections and contact form. */
 export default function LandingPage() {
   return (
     <main className="landing-page">

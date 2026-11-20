@@ -1,10 +1,10 @@
 import { useLocation } from "react-router";
 
+/** Returns the navigation link index associated with the current URL hash. */
 export function useActiveNavLinkIndex() {
   const { hash } = useLocation();
   let activeIndex = -1;
 
-  // NavLink matches the pathname, not the hash, so all of these links to "/" would be active together.
   switch (hash) {
     case "#about-me":
       activeIndex = 0;

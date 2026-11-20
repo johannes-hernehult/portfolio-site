@@ -1,5 +1,6 @@
 import styles from "./styles.module.css";
 
+/** Renders the landing page's skills and technology section. */
 export function SkillsAndTech() {
   return (
     <section className={styles.skillsAndTech}>

@@ -9,12 +9,13 @@ import {
   projects,
 } from "../../features/project";
 
+/** Renders the project matching the current route slug. */
 function ProjectPage() {
   const { slug } = useParams();
 
   const currentIndex = projects.findIndex((project) => project.slug === slug);
 
-  // Guard against invalid URLs
+  // Redirect unknown slugs so they never render an empty project detail page.
   if (currentIndex === -1) {
     return <Navigate to="/404" replace />;
   }

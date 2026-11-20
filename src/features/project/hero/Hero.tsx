@@ -5,6 +5,7 @@ interface HeroProps {
   project: Project;
 }
 
+/** Renders a project's title, summary, cover, links, role, and tags. */
 export function Hero({ project }: HeroProps) {
   const { title, images, links, summary, tags, role } = project;
   const coverImage = images.find((image) => image.order === 0);

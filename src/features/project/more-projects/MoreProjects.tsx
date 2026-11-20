@@ -6,6 +6,7 @@ interface MoreProjectsProps {
   projects: Project[];
 }
 
+/** Renders the more-projects section on a project page. */
 export function MoreProjects({ project, projects }: MoreProjectsProps) {
   return <section className={styles.project}>
     <h2>More projects</h2>

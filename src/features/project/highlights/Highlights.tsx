@@ -5,6 +5,7 @@ interface HighlightsProps {
   project: Project;
 }
 
+/** Presents the project lessons under a discipline-specific heading. */
 export function Highlights({ project }: HighlightsProps) {
   const { lessons, discipline } = project;
 

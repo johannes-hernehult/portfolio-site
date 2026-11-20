@@ -1,6 +1,7 @@
 export type ExperienceCategory = "work" | "education" | "project";
 export type ExperienceDiscipline = "engineering" | "3d" | "other";
 
+/** Describes a work, education, or project entry shown on the experience timeline. */
 export interface Experience {
   id: string;
   category: ExperienceCategory;
