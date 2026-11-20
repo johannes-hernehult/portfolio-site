@@ -181,7 +181,6 @@ header {
 
 footer {
     grid-column: 2 / 3;
-    height: 100%;
     display: grid;
     place-items: center;
     text-align: center;
