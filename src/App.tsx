@@ -4,7 +4,7 @@ import "./App.css";
 import ProjectPage from "./routes/project";
 import LandingPage from "./routes/landingpage";
 import { Navbar } from "./features/components/navigation";
-import { Footer } from "./features/components/footer/Footer";
+import { Footer } from "./features/components/footer";
 
 /** Renders the application routes and shared navigation and footer. */
 export default function App() {
