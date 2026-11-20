@@ -44,7 +44,8 @@
     --space-2xl: 3.5rem; /* 56px */
 
     /* Layout */
-    --container-max: 50rem;
+    --container-max: 1280px;
+    --container-narrow: 850px;
     --sidebar-width: 20rem;
     --viewport-h: 100vh;
 
@@ -90,6 +91,7 @@
 
 /* 3. Prevent mobile browsers from arbitrarily inflating font sizes */
 html {
+    overscroll-behavior-y: none;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
@@ -166,10 +168,11 @@ html {
 #root {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: auto var(--space-xl);
 }
 
 nav {
+    background-color: var(--color-surface);
+
     grid-column: 1 / 2;
     grid-row: span 2;
 }
@@ -187,12 +190,14 @@ footer {
     display: grid;
     place-items: center;
     text-align: center;
-    padding: var(--space-sm);
+    padding: var(--space-md);
+    padding-top: var(--space-xl);
 }
 
 main > section {
     padding-inline: var(--space-2xl);
     padding-block: var(--space-md);
+    max-width: 1280px;
 }
 
 h1,
