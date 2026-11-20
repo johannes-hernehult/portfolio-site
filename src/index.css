@@ -171,18 +171,18 @@ html {
     grid-template-columns: 300px 1fr;
 }
 
-header {
-    background-color: var(--color-surface);
-
-    grid-column: 1 / 2;
-    grid-row: span 2;
-}
-
 main {
     grid-column: span 1;
     display: flex;
     flex-direction: column;
     gap: var(--space-2xl);
+}
+
+header {
+    background-color: var(--color-surface);
+
+    grid-column: 1 / 2;
+    grid-row: span 2;
 }
 
 footer {
