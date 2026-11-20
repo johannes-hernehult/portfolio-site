@@ -161,9 +161,11 @@ html {
 
 #root {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: var(--sidebar-width) 1fr;
 }
-
+div.content {
+    grid-column: 2 / 3;
+}
 main {
     grid-column: span 1;
     display: flex;
@@ -172,10 +174,9 @@ main {
 }
 
 header {
+    position: fixed;
     background-color: var(--color-surface);
-
-    grid-column: 1 / 2;
-    grid-row: span 2;
+    max-width: var(--sidebar-width);
 }
 
 footer {
@@ -244,6 +245,10 @@ p {
     margin-bottom: 1.5em;
 }
 
+p:last-of-type {
+    margin-bottom: 0;
+}
+
 a {
     color: var(--color-text);
 }
@@ -271,8 +276,18 @@ button {
         gap: var(--space-md);
     }
 
+    main {
+        gap: var(--space-xl);
+    }
+
+    main > section {
+        padding-inline: var(--space-md);
+    }
+
     header {
         height: fit-content;
+        position: static;
+        max-width: 100%;
     }
 
     footer {

@@ -23,12 +23,14 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/project/:slug" element={<ProjectPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      <Footer />
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/project/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 }
