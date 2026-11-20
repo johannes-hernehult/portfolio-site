@@ -4,8 +4,8 @@ import {
   Gallery,
   Hero,
   Highlights,
+  MoreProjects,
   Overview,
-  ProjectCta,
   projects,
 } from "../../features/project";
 
@@ -27,7 +27,7 @@ function ProjectPage() {
       <Gallery project={project} />
       <Overview project={project} />
       <Highlights project={project} />
-      <ProjectCta project={project} projects={projects} />
+      <MoreProjects project={project} projects={projects} />
       <Contact />
     </main>
   );

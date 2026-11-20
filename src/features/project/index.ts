@@ -1,7 +1,7 @@
 export { Hero } from "./hero/Hero";
 export { Overview } from "./overview/Overview";
 export { Gallery } from "./gallery/Gallery";
-export { ProjectCta } from "./project-cta/ProjectCta";
+export { MoreProjects } from "./more-projects/MoreProjects";
 export { Highlights } from "./highlights/Highlights";
 
 export { projects } from "./MockData";
