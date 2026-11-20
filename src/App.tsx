@@ -7,11 +7,17 @@ import { Navbar } from "./features/components/navigation";
 import { Footer } from "./features/components/footer/Footer";
 
 export default function App() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useLayoutEffect(() => {
+    if (hash) {
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return (
     <>

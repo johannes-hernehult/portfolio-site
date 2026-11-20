@@ -27,7 +27,7 @@ export function Experiences({ experiences }: ExperiencesProps) {
   );
 
   return (
-    <section className={styles.experiences}>
+    <section className={styles.experiences} id="experiences">
       <h2>Experiences</h2>
       <Grid>
         {sortedExperiences.map((experience) => (

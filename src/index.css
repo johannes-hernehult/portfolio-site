@@ -91,6 +91,7 @@
 
 /* 3. Prevent mobile browsers from arbitrarily inflating font sizes */
 html {
+    scroll-behavior: smooth;
     overscroll-behavior-y: none;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -170,7 +171,7 @@ html {
     grid-template-columns: 300px 1fr;
 }
 
-nav {
+header {
     background-color: var(--color-surface);
 
     grid-column: 1 / 2;
@@ -275,10 +276,8 @@ button {
         gap: var(--space-md);
     }
 
-    nav {
+    header {
         height: fit-content;
-
-        background-color: #11bb2220;
     }
 
     footer {

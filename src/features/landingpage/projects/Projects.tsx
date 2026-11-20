@@ -1,9 +1,11 @@
+import styles from "./styles.module.css";
+
 import { Link } from "react-router";
 import { projects } from "../../project/MockData";
 
 export function Projects() {
   return (
-    <section>
+    <section className={styles.projects} id="projects">
       <h2>My projects</h2>
       <ul>
         {projects.map((project) => (

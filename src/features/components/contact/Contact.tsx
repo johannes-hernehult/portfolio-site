@@ -23,7 +23,7 @@ export function Contact() {
   }
 
   return (
-    <section className={styles.contact}>
+    <section className={styles.contact} id="contact">
       <h2>Contact</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.details}>
