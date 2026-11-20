@@ -1,31 +1,22 @@
-import { Link } from "react-router";
-import { useActiveNavLinkIndex } from "./useActiveNavLinkIndex";
-
-const navLinks = [
-  { hash: "#about-me", label: "About Me" },
-  { hash: "#projects", label: "Projects" },
-  { hash: "#experiences", label: "Experiences" },
-  { hash: "#contact", label: "Contact" },
-];
+// navigation/Navbar.tsx
+import { Link, useLocation } from "react-router";
+import { navLinks } from "./navLinks";
 
 /** Renders the site navigation and marks the current section link as active. */
 export function Navbar() {
-  const activeIndex = useActiveNavLinkIndex();
+  const { hash: currentHash } = useLocation();
 
   return (
     <header>
       <Link to="/">
-        <img src="images/jh.jpg" alt="Profile photo of Johannes Hernehult" />
-      </Link>
-      <Link to="/">
+        <img src="/images/jh.jpg" alt="" />
         <span>Johannes Hernehult</span>
-        <br />
         <span>Fullstack Engineer</span>
       </Link>
 
       <nav>
-        {navLinks.map(({ hash, label }, index) => {
-          const isActive = index === activeIndex;
+        {navLinks.map(({ hash, label }) => {
+          const isActive = hash === currentHash;
 
           return (
             <Link
