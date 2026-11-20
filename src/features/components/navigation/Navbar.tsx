@@ -1,4 +1,4 @@
-// navigation/Navbar.tsx
+import styles from "./styles.module.css";
 import { Link, useLocation } from "react-router";
 import { navLinks } from "./navLinks";
 
@@ -8,10 +8,10 @@ export function Navbar() {
 
   return (
     <header>
-      <Link to="/">
+      <Link to="/" className={styles.homeLink}>
         <img src="/images/jh.jpg" alt="" />
-        <span>Johannes Hernehult</span>
-        <span>Fullstack Engineer</span>
+        <span className={styles.name}>Johannes Hernehult</span>
+        <span className={styles.role}>Fullstack Engineer</span>
       </Link>
 
       <nav>
@@ -22,7 +22,7 @@ export function Navbar() {
             <Link
               key={hash}
               to={`/${hash}`}
-              className={isActive ? "active" : undefined}
+              className={isActive ? styles.active : undefined}
               aria-current={isActive ? "location" : undefined}
             >
               {label}

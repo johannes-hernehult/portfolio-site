@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 /** Renders the landing page's about section. */
 export function About() {
   return (
-    <section className={styles.about} id="about-me">
+    <section className={styles.about} id="about">
       <h2>About me</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, facere

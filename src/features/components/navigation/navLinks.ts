@@ -1,5 +1,5 @@
 export const navLinks = [
-  { hash: "#about-me", label: "About Me" },
+  { hash: "#about", label: "About" },
   { hash: "#projects", label: "Projects" },
   { hash: "#experiences", label: "Experiences" },
   { hash: "#contact", label: "Contact" },

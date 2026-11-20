@@ -1,0 +1,111 @@
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.homeLink {
+    position: relative;
+    text-decoration: none;
+    background-color: var(--color-bg);
+}
+
+.homeLink::after {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    bottom: -0.2em;
+    height: var(--border-thin);
+    content: "";
+    background: var(--gradient-accent);
+    opacity: 0.75;
+}
+
+.homeLink:hover {
+    color: var(--color-text);
+}
+
+.name {
+    font-size: var(--text-2xl);
+    line-height: 1;
+    display: block;
+    padding-top: var(--space-md);
+    padding-inline: var(--space-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.role {
+    padding-bottom: var(--space-md);
+    padding-inline: var(--space-lg);
+
+    font-size: var(--text-lg);
+    line-height: 1;
+    display: block;
+
+    color: transparent;
+    background: var(--gradient-accent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: var(--space-md);
+    padding-block: var(--space-lg);
+    padding-inline: var(--space-2xl);
+    width: 100%;
+    height: 100%;
+}
+
+nav a {
+    display: block;
+    position: relative;
+    width: fit-content;
+    text-decoration: none;
+    font-size: var(--text-lg);
+}
+
+nav a.active {
+    color: transparent;
+    background: var(--gradient-accent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 960px) {
+    nav {
+        position: sticky;
+        flex-direction: row;
+        align-items: centr;
+        justify-content: center;
+        gap: var(--space-lg);
+        padding-block: var(--space-md);
+        padding-inline: var(--space-md);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    nav a {
+        font-size: var(--text-md);
+    }
+}
+
+@media screen and (max-width: 369px) {
+    nav a {
+        font-size: var(--text-sm);
+    }
+
+    nav {
+
+        gap: var(--space-md);
+        padding-block: var(--space-md);
+        padding-inline: var(--space-md);
+        height: auto;
+        background-color: var(--color-surface);
+    }
+}
