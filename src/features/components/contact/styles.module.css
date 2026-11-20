@@ -1,12 +1,12 @@
 .contact {
     width: 100%;
+    max-width: var(--container-narrow);
 }
 
 .form {
     display: grid;
-    grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: 1fr 2fr;
     gap: var(--space-md);
-    max-width: 48rem;
 }
 
 .details {

@@ -36,16 +36,15 @@ export function Contact() {
             Email
             <input autoComplete="email" name="email" type="email" required />
           </label>
-
-          <button className={styles.submit} type="submit" disabled={isSending}>
-            {isSending ? "Sending..." : "Send"}
-          </button>
         </div>
 
         <label className={`${styles.field} ${styles.message}`}>
           Message
           <textarea name="message" required />
         </label>
+        <button className={styles.submit} type="submit" disabled={isSending}>
+          {isSending ? "Sending..." : "Send"}
+        </button>
       </form>
     </section>
   );
