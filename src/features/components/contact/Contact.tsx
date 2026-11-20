@@ -1,25 +1,31 @@
 import { useState, type FormEvent } from "react";
 import styles from "./styles.module.css";
 
+type Status = "idle" | "sending" | "sent" | "error";
+
+// TODO: replace with the real request
+async function sendMessage(values: Record<string, FormDataEntryValue>) {
+  await new Promise((resolve) => setTimeout(resolve, 700));
+  console.log("sent", values);
+}
+
 /** Renders the contact form and its submission state. */
 export function Contact() {
-  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const isSending = status === "sending";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const values = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
+    const form = event.currentTarget;
+    const values = Object.fromEntries(new FormData(form));
 
-    setIsSending(true);
+    setStatus("sending");
     try {
-      await new Promise((resolve) => window.setTimeout(resolve, 700));
-      console.log("sent", values);
-    } finally {
-      setIsSending(false);
+      await sendMessage(values);
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
     }
   }
 
@@ -43,9 +49,15 @@ export function Contact() {
           Message
           <textarea name="message" required />
         </label>
+
         <button className={styles.submit} type="submit" disabled={isSending}>
           {isSending ? "Sending..." : "Send"}
         </button>
+
+        <p role="status">
+          {status === "sent" && "Message sent."}
+          {status === "error" && "Something went wrong. Please try again."}
+        </p>
       </form>
     </section>
   );
