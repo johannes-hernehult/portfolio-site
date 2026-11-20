@@ -27,8 +27,8 @@ function ProjectPage() {
       <Gallery project={project} />
       <Overview project={project} />
       <Highlights project={project} />
-      <MoreProjects project={project} projects={projects} />
       <Contact />
+      <MoreProjects project={project} projects={projects} />
     </main>
   );
 }
