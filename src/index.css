@@ -254,6 +254,8 @@ p {
 a {
     color: var(--color-text);
 }
+
+a.active,
 a:hover {
     color: var(--color-accent);
 }

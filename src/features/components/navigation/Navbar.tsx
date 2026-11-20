@@ -1,6 +1,16 @@
-import { Link, NavLink } from "react-router";
+import { Link } from "react-router";
+import { useActiveNavLinkIndex } from "./useActiveNavLinkIndex";
+
+const navLinks = [
+  { hash: "#about-me", label: "About Me" },
+  { hash: "#projects", label: "Projects" },
+  { hash: "#experiences", label: "Experiences" },
+  { hash: "#contact", label: "Contact" },
+];
 
 export function Navbar() {
+  const activeIndex = useActiveNavLinkIndex();
+
   return (
     <header>
       <Link to="/">
@@ -13,10 +23,20 @@ export function Navbar() {
       </Link>
 
       <nav>
-        <NavLink to="/#about-me">About Me</NavLink>
-        <NavLink to="/#projects">Projects</NavLink>
-        <NavLink to="/#experiences">Experiences</NavLink>
-        <NavLink to="/#contact">Contact</NavLink>
+        {navLinks.map(({ hash, label }, index) => {
+          const isActive = index === activeIndex;
+
+          return (
+            <Link
+              key={hash}
+              to={`/${hash}`}
+              className={isActive ? "active" : undefined}
+              aria-current={isActive ? "location" : undefined}
+            >
+              {label}
+            </Link>
+          );
+        })}
       </nav>
     </header>
   );
