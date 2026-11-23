@@ -5,7 +5,7 @@ export default function Project() {
 
   return (
     <main className="project">
-      <h1>Project {slug}</h1>;
+      <h1>Project {slug}</h1>
     </main>
   );
 }
