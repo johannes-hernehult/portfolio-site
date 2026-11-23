@@ -46,3 +46,22 @@ main > section {
 main > section:not(:first-of-type) {
     max-width: 840px;
 }
+
+@media screen and (max-width: 900px) {
+    header {
+        position: static;
+        max-width: 100%;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    footer {
+        height: var(--size-2xl);
+        margin-left: 0;
+    }
+    main > section:not(:first-of-type) {
+        max-width: 100%;
+    }
+}
