@@ -1,0 +1,33 @@
+#root {
+    height: 100%;
+    min-height: 100dvh;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: var(--sidebar-width);
+
+    background-color: #ffff1110;
+}
+
+main {
+    height: 100%;
+    margin-left: var(--sidebar-width);
+    background-color: #ff11ff10;
+}
+
+footer {
+    margin-left: var(--sidebar-width);
+    background-color: #11ffff10;
+}
+
+main,
+footer,
+nav {
+    padding: var(--size-md);
+}
