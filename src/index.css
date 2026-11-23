@@ -140,7 +140,6 @@ html {
 
 body {
     margin: 0;
-    max-width: calc(840px + var(--sidebar-width));
     min-height: 100vh;
 }
 
@@ -148,6 +147,7 @@ h1,
 h2,
 h3,
 h4 {
+    width: fit-content;
     position: relative;
     margin-bottom: var(--size-md);
     letter-spacing: 0.03em;
