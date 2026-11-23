@@ -1,6 +1,6 @@
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <main className="home">
       <section className="hero">
@@ -9,22 +9,26 @@ function App() {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste nihil
           recusandae eaque!
         </p>
-        <button>CTA</button>
+        <a href="#projects" className="cta">
+          View Selected Work
+        </a>
       </section>
 
-      <section className="about">
-        <h2>Who am I?</h2>
+      <section id="projects" className="projects">
+        <h2>Selected Work</h2>
       </section>
 
-      <section className="projects">
-        <h2>Some of what I have done</h2>
+      <section id="experience" className="experience">
+        <h2>Experience</h2>
       </section>
 
-      <section className="projects">
-        <h2>Some of what I have done</h2>
+      <section id="about" className="about">
+        <h2>About</h2>
+      </section>
+
+      <section id="contact" className="contact">
+        <h2>Let's get in touch</h2>
       </section>
     </main>
   );
 }
-
-export default App;
