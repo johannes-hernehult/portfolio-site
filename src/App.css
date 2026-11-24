@@ -38,16 +38,22 @@ section[id] {
     #root {
         display: flex;
         flex-direction: column;
-        gap: var(--size-md);
     }
 
     main {
         margin-left: 0;
     }
 
+    main > section {
+        padding: var(--size-md);
+    }
+
     footer {
         height: var(--size-2xl);
         margin-left: 0;
+        margin-top: var(--size-sm);
+
+        color: var(--color-text-dark);
     }
 
     main > section:not(:first-of-type) {
