@@ -33,7 +33,7 @@
 }
 
 .role {
-    font-size: var(--size-xl);
+    font-size: var(--size-lg);
     color: var(--color-text-dark);
 }
 
