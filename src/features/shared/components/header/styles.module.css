@@ -5,6 +5,19 @@
     bottom: 0;
     width: 100%;
     max-width: var(--sidebar-width);
+    background-color: var(--color-bg);
+}
+
+.profile {
+    position: relative;
+}
+.profile::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--gradient-accent);
 }
 
 .info {
