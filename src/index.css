@@ -89,7 +89,8 @@ textarea {
     --color-project: hsl(100 75% 44%);
     --color-work: hsl(40 90% 66%);
 
-    --color-border: hsl(240 4% 18%);
+    --color-border: hsla(240, 5%, 96%, 0.5);
+    --color-border-accent: hsl(38, 92%, 50%);
 
     /* Gradients */
     --gradient-accent: linear-gradient(
@@ -119,6 +120,7 @@ textarea {
     --radius-md: var(--size-xs);
     --radius-lg: var(--size-md);
     --border: var(--size-3xs) solid var(--color-border);
+    --border-primary: var(--size-3xs) solid var(--color-border-accent);
     --sidebar-width: 300px;
 }
 
@@ -171,4 +173,12 @@ a:has(img) {
 }
 a:hover:not(:has(img)) {
     color: var(--color-accent);
+}
+
+button,
+a {
+    border-radius: var(--radius-sm);
+    transition:
+        background-color 125ms ease-in-out,
+        color 125ms ease-in-out;
 }
