@@ -2,25 +2,14 @@ import "../../App.css";
 import styles from "./styles.module.css";
 import Hero from "./sections/hero/Hero";
 import Projects from "./sections/projects/Projects";
+import Experience from "./sections/experience/Experience";
 
 export function Home() {
   return (
     <main className={styles.home}>
       <Hero />
       <Projects />
-
-      <section id="experience" className="experience">
-        <h2>Experience</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          veniam modi, dolorum repellat libero consequatur laboriosam blanditiis
-          doloribus porro eum similique aliquam omnis labore vitae nisi soluta
-          quas sed itaque illo provident beatae? Unde, sunt. Maiores ab sunt
-          ipsam ipsa aspernatur odio dicta esse recusandae, exercitationem
-          necessitatibus? Atque, deserunt ad.
-        </p>
-      </section>
-
+      <Experience />
       <section id="about" className="about">
         <h2>About</h2>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
