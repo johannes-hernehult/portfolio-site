@@ -9,5 +9,7 @@
     .nav {
         flex-direction: row;
         justify-content: space-evenly;
+        padding: var(--size-xs);
+        padding-bottom: var(--size-md);
     }
 }

@@ -31,21 +31,28 @@
         bottom: auto;
         max-width: 100%;
         z-index: 10;
+        background-color: var(--color-bg-dark);
     }
 
     .profile {
         display: flex;
     }
 
-    .header .profile {
-        display: flex;
+    .profile img {
+        display: none;
+    }
+
+    .info {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .name {
-        font-size: var(--size-xl);
+        font-size: var(--size-lg);
     }
 
     .role {
-        font-size: var(--size-lg);
+        font-size: var(--size-md);
     }
 }
