@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Hero from "./sections/hero/Hero";
 import Projects from "./sections/projects/Projects";
 import Experience from "./sections/experience/Experience";
+import About from "./sections/about/About";
 
 export function Home() {
   return (
@@ -10,13 +11,7 @@ export function Home() {
       <Hero />
       <Projects />
       <Experience />
-      <section id="about" className="about">
-        <h2>About</h2>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-        velit aspernatur modi unde excepturi blanditiis quisquam aut quasi
-        beatae quaerat? Quisquam optio nemo, ab tempore exercitationem at esse,
-        cupiditate culpa neque soluta odit!
-      </section>
+      <About />
 
       <section id="contact" className="contact">
         <h2>Let's get in touch</h2>
