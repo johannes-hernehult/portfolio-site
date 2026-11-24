@@ -1,5 +1,5 @@
 .hero {
-    background-color: #ffffff20;
+    background-color: var(--color-bg-light);
 
     padding-block: calc(var(--size-3xl) * 3.45);
 }
@@ -18,13 +18,16 @@
     padding-inline: var(--size-md);
     padding-block: var(--size-2xs);
     line-height: 1;
-}
-.cta:first-of-type {
-    background-color: #ff999925;
+    text-decoration: none;
+    color: var(--color-accent-light);
+    border: var(--border-primary);
     margin-right: var(--size-md);
-}
-.cta:last-of-type {
-    background-color: #89ff9925;
+    font-weight: bold;
+
+    &:hover {
+        background-color: var(--color-accent);
+        color: var(--color-bg-dark);
+    }
 }
 
 @media screen and (max-width: 900px) {

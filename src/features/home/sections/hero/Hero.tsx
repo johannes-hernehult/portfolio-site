@@ -10,9 +10,7 @@ export default function Hero() {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste nihil
         recusandae eaque!
       </p>
-      <Link to="#projects" className={styles.cta}>
-        View my Work
-      </Link>
+
       <Link to="#contact" className={styles.cta}>
         Let's connect!
       </Link>
