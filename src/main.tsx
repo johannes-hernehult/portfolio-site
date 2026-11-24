@@ -9,6 +9,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <header>
+        <img src="#" alt="Profile photo of Johannes Hernehult" width={300} height={300}/>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/project/1">Project 1</Link>

@@ -119,7 +119,7 @@ textarea {
     --radius-md: var(--size-xs);
     --radius-lg: var(--size-md);
     --border: var(--size-3xs) solid var(--color-border);
-    --sidebar-width: 350px;
+    --sidebar-width: 300px;
 }
 
 /* ==========================================================================
