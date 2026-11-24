@@ -99,8 +99,8 @@ textarea {
     );
     --gradient-bg: linear-gradient(
         to bottom right,
-        var(--color-bg-dark),
-        var(--color-bg)
+        var(--color-bg-light),
+        var(--color-bg-dark)
     );
 
     /* Spacing & Sizing */
@@ -127,7 +127,7 @@ textarea {
    ========================================================================== */
 html {
     background: var(--gradient-bg);
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-dark);
     color: var(--color-text);
     font-family: sans-serif;
     font-size: var(--size-md);
