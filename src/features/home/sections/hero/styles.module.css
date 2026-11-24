@@ -26,3 +26,9 @@
 .cta:last-of-type {
     background-color: #89ff9925;
 }
+
+@media screen and (max-width: 900px) {
+    .hero {
+        padding-block: calc(var(--size-3xl) * 2.5);
+    }
+}
