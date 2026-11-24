@@ -1,11 +1,11 @@
-import "./App.css";
+import "../../App.css";
+import styles from "./styles.module.css";
 import Hero from "./sections/hero/Hero";
 
 export function Home() {
   return (
-    <main className="home">
+    <main className={styles.home}>
       <Hero />
-
       <section id="projects" className="projects">
         <h2>Selected Work</h2>
         <p>

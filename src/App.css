@@ -23,7 +23,7 @@ footer {
 }
 
 main > section {
-    padding: var(--size-md);
+    padding: var(--size-xl);
 }
 
 main > section:not(:first-of-type) {
