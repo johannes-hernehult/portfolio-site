@@ -1,25 +1,13 @@
 import "../../App.css";
 import styles from "./styles.module.css";
 import Hero from "./sections/hero/Hero";
+import Projects from "./sections/projects/Projects";
 
 export function Home() {
   return (
     <main className={styles.home}>
       <Hero />
-      <section id="projects" className="projects">
-        <h2>Selected Work</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sit
-          modi voluptatum repellendus et nisi quam provident aliquid doloribus
-          eum beatae ex voluptates at alias quibusdam, impedit pariatur libero
-          quae esse molestias! Accusamus possimus, ullam error voluptates,
-          optio, asperiores cum quasi fugiat voluptatibus ut adipisci. Cum illum
-          expedita eum inventore tempora, eos nam pariatur natus molestiae
-          necessitatibus! Libero sit soluta voluptatibus earum sint ipsum
-          doloremque aspernatur vero modi fuga inventore harum corrupti, magnam
-          nihil? Sed!
-        </p>
-      </section>
+      <Projects />
 
       <section id="experience" className="experience">
         <h2>Experience</h2>
