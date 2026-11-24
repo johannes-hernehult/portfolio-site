@@ -11,5 +11,15 @@
         justify-content: space-evenly;
         padding: var(--size-xs);
         padding-bottom: var(--size-md);
+        box-shadow: 0 12px 24px 4px var(--color-bg);
+    }
+
+    .nav::after {
+        content: "";
+        position: absolute;
+        inset-inline: 0;
+        bottom: 0;
+        height: 1px;
+        background: var(--gradient-accent);
     }
 }
