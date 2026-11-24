@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className={styles.hero}>
       <h1>Lorem ipsum dolor sit.</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste nihil

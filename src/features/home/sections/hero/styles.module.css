@@ -1,3 +1,19 @@
+.hero {
+    background-color: #ffffff20;
+
+    padding-block: calc(var(--size-3xl) * 3.45);
+}
+
+.hero h1 {
+    line-height: 1;
+    margin-bottom: var(--size-md);
+}
+
+.hero p {
+    line-height: 1;
+    margin-bottom: var(--size-xl);
+}
+
 .cta {
     padding-inline: var(--size-md);
     padding-block: var(--size-2xs);
@@ -5,6 +21,7 @@
 }
 .cta:first-of-type {
     background-color: #ff999925;
+    margin-right: var(--size-md);
 }
 .cta:last-of-type {
     background-color: #89ff9925;
