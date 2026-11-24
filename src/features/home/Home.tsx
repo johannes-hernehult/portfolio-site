@@ -1,6 +1,7 @@
 import "./App.css";
 
-export default function App() {
+
+export function Home() {
   return (
     <main className="home">
       <section className="hero">

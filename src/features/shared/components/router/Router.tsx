@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router";
-import App from "../../../../App";
-import Project from "../../../project/Project";
+import { Home } from "../../../home";
+import { Project } from "../../../project";
 
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Home />} />
       <Route path="/project/:slug" element={<Project />} />
     </Routes>
-  )
+  );
 }
