@@ -91,6 +91,7 @@ textarea {
 
     --color-border: hsla(240, 5%, 96%, 0.5);
     --color-border-accent: hsl(38, 92%, 50%);
+    --color-border-muted: hsl(240 4% 14%);
 
     /* Gradients */
     --gradient-accent: linear-gradient(
@@ -98,10 +99,17 @@ textarea {
         var(--color-accent-light) 0%,
         var(--color-accent-dark) 95%
     );
+
     --gradient-bg: linear-gradient(
         to bottom right,
         var(--color-bg-light),
         var(--color-bg-dark)
+    );
+
+    --gradient-text: linear-gradient(
+        to bottom right,
+        var(--color-text),
+        var(--color-text)
     );
 
     /* Spacing & Sizing */
@@ -120,6 +128,7 @@ textarea {
     --radius-md: var(--size-xs);
     --radius-lg: var(--size-md);
     --border: var(--size-3xs) solid var(--color-border);
+    --border-muted: 2px solid var(--color-border-muted);
     --border-primary: var(--size-3xs) solid var(--color-border-accent);
     --sidebar-width: 300px;
 }
