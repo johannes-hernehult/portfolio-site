@@ -1,0 +1,51 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: var(--sidebar-width);
+}
+
+.info {
+    padding: var(--size-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+    line-height: 1;
+}
+
+.name {
+    font-size: var(--size-3xl);
+}
+
+.role {
+    font-size: var(--size-xl);
+    color: var(--color-text-dark);
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        position: sticky;
+        top: 0;
+        bottom: auto;
+        max-width: 100%;
+        z-index: 10;
+    }
+
+    .profile {
+        display: flex;
+    }
+
+    .header .profile {
+        display: flex;
+    }
+
+    .name {
+        font-size: var(--size-xl);
+    }
+
+    .role {
+        font-size: var(--size-lg);
+    }
+}

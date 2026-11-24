@@ -1,26 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
-import { BrowserRouter, Route, Routes, Link, useParams } from "react-router";
-import Project from "./features/project/Project.tsx";
+import { BrowserRouter } from "react-router";
+import { Header } from "./features/shared/components/header";
+import { Router } from "./features/shared/components/router";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <header>
-        <img src="#" alt="Profile photo of Johannes Hernehult" width={300} height={300}/>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/project/1">Project 1</Link>
-          <Link to="/project/2">Project 2</Link>
-        </nav>
-      </header>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/project/:slug" element={<Project />} />
-      </Routes>
-
+      <Header />
+      <Router />
       <footer>© {new Date().getFullYear()} Johannes Hernehult</footer>
     </BrowserRouter>
   </StrictMode>,
