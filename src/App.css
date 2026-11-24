@@ -27,11 +27,7 @@ main > section {
 }
 
 main > section:not(:first-of-type) {
-    max-width: 840px;
-}
-
-section[id] {
-    scroll-margin-top: 130px;
+    max-width: 1080px;
 }
 
 @media screen and (max-width: 900px) {
@@ -58,5 +54,9 @@ section[id] {
 
     main > section:not(:first-of-type) {
         max-width: 100%;
+    }
+
+    section[id] {
+        scroll-margin-top: 130px;
     }
 }
