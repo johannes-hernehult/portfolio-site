@@ -7,7 +7,7 @@ export function Header() {
       <div className={styles.profile}>
 
       <img
-        src="#"
+        src="/images/johannes-hernehult.webp"
         alt="Profile photo of Johannes Hernehult"
         width={300}
         height={300}
