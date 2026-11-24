@@ -1,19 +1,10 @@
 import "./App.css";
-
+import Hero from "./sections/hero/Hero";
 
 export function Home() {
   return (
     <main className="home">
-      <section className="hero">
-        <h1>Lorem ipsum dolor sit.</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste nihil
-          recusandae eaque!
-        </p>
-        <a href="#projects" className="cta">
-          View Selected Work
-        </a>
-      </section>
+      <Hero />
 
       <section id="projects" className="projects">
         <h2>Selected Work</h2>

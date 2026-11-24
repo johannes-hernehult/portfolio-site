@@ -1,0 +1,11 @@
+.cta {
+    padding-inline: var(--size-md);
+    padding-block: var(--size-2xs);
+    line-height: 1;
+}
+.cta:first-of-type {
+    background-color: #ff999925;
+}
+.cta:last-of-type {
+    background-color: #89ff9925;
+}
