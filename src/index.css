@@ -166,7 +166,9 @@ h2::after {
 p {
     max-width: 80ch;
 }
-
-a:hover {
+a:has(img) {
+    text-decoration: none;
+}
+a:hover:not(:has(img)) {
     color: var(--color-accent);
 }
