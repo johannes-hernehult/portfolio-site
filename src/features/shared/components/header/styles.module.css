@@ -16,7 +16,7 @@
     position: absolute;
     inset-inline: 0;
     bottom: 0;
-    height: 1px;
+    height: 2px;
     background: var(--gradient-accent);
 }
 
