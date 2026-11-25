@@ -1,0 +1,43 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-md);
+    max-width: 80ch;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3xs);
+    font-size: var(--size-sm);
+    color: var(--color-text-muted);
+    font-weight: bold;
+}
+
+.form input,
+.form textarea {
+    letter-spacing: 0.05em;
+
+    padding-inline: var(--size-xs);
+    padding-block: var(--size-3xs);
+    font-size: var(--size-md);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-light);
+    color: var(--color-text);
+    resize: none;
+    border: var(--border-muted);
+    font-weight: normal;
+}
+
+.form textarea {
+    height: 200px;
+}
+
+.form label:has(textarea) {
+    flex-basis: 100%;
+}
+
+.form label:has(input) {
+    flex-basis: 45%;
+    flex-grow: 1;
+}

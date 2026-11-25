@@ -1,16 +1,16 @@
 import type { SubmitEvent } from "react";
+import styles from "./styles.module.css";
 
 export function Contact() {
-
   function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("Sending...")
+    console.log("Sending...");
   }
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className={styles.contact}>
       <h2>Let's get in touch</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <label>
           Email
           <input
