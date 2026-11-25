@@ -18,8 +18,8 @@
 .form textarea {
     letter-spacing: 0.05em;
 
-    padding-inline: var(--size-xs);
-    padding-block: var(--size-3xs);
+    padding-inline: var(--size-sm);
+    padding-block: var(--size-xs);
     font-size: var(--size-md);
     border-radius: var(--radius-md);
     background: linear-gradient(145deg, var(--color-bg-light), var(--color-bg));
