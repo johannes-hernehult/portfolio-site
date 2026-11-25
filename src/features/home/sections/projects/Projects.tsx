@@ -2,12 +2,11 @@ import { Link } from "react-router";
 import styles from "./styles.module.css";
 import { PROJECTS } from "../../../shared/data/projects";
 
-
 export default function Projects() {
   const projectItems = PROJECTS.map((project) => (
     <li
       key={project.id}
-      className={`${styles.card} ${styles[project.size] || ""}`}
+      className={`${styles.card} ${styles[project.cardSize] || ""}`}
       style={{ backgroundImage: `url(${project.url})` }}
     >
       <Link to={`/project/${project.slug}`} className={styles.link}>
