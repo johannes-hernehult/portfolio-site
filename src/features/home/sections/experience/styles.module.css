@@ -11,11 +11,13 @@
     display: flex;
     min-width: 0;
     flex-direction: column;
+    gap: var(--size-sm);
     padding: var(--size-lg);
     overflow: hidden;
     border: var(--border-muted);
     border-radius: var(--radius-md);
-    background: linear-gradient(145deg, var(--color-bg-light), var(--color-bg));
+    background: var(--surface-card);
+    box-shadow: var(--shadow-card);
 }
 
 .header {
@@ -28,17 +30,16 @@
 .header h3 {
     width: auto;
     min-width: 0;
-    margin-bottom: 0;
     color: var(--color-text);
     font-size: var(--size-lg);
     line-height: 1.25;
 }
 
 .description {
-    margin-bottom: var(--size-md);
+    margin-bottom: var(--size-2xs);
     color: var(--color-text-dark);
     font-size: var(--size-md);
-    line-height: 1.55;
+    line-height: 1.5;
 }
 
 .highlights {
@@ -58,7 +59,7 @@
 
 .highlights li::before {
     position: absolute;
-    top: 0.67em;
+    top: calc(0.75em - 3px);
     left: 0;
     width: 6px;
     height: 6px;
@@ -72,21 +73,24 @@
     flex-wrap: wrap;
     gap: var(--size-xs);
     margin: auto 0 0;
-    padding: var(--size-md) 0 0;
+    padding: var(--size-sm) 0 0;
     list-style: none;
 }
 
 .techTag,
 .date {
-    padding: var(--size-xs) var(--size-sm);
-    background-color: var(--color-bg-light);
+    padding: var(--size-2xs) var(--size-sm);
+    background-color: var(--color-bg);
     border: var(--border-muted);
     border-radius: var(--radius-lg);
-    line-height: 1;
+    color: var(--color-text-dark);
+    font-size: var(--size-sm);
+    line-height: 1.2;
 }
 
 .date {
     flex: 0 0 auto;
+    font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
 

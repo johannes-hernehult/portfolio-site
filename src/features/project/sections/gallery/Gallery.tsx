@@ -9,8 +9,10 @@ type GalleryProps = {
 export function Gallery({ project }: GalleryProps) {
   const galleryItems = [...project.images]
     .sort((a, b) => a.order - b.order)
-    .map(image => (
-      <img src={image.url} alt={image.altText} key={image.altText.slice(0, 20)} />
+    .map((image) => (
+      <li key={image.altText.slice(0, 20)}>
+        <img src={image.url} alt={image.altText} />
+      </li>
     ));
 
   return (

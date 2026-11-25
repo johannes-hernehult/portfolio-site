@@ -11,7 +11,7 @@ export default function Hero() {
         recusandae eaque!
       </p>
 
-      <Link to="#contact" className={styles.cta}>
+      <Link to="#contact" className="btn">
         <span>Let's connect!</span>
       </Link>
     </section>
