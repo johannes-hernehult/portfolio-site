@@ -1,13 +1,32 @@
-import styles from "./styles.module.css";
 import { Link } from "react-router";
+import { useActiveSection } from "../../../hooks/useActiveSection";
+import styles from "./styles.module.css";
+
+const sections = [
+  { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "about", label: "About" },
+  { id: "contact", label: "Contact" },
+] as const;
+
+const sectionIds = sections.map(({ id }) => id);
 
 export default function Navbar() {
+  const { activeSectionId, activateSection } = useActiveSection(sectionIds);
+
   return (
-    <nav className={styles.nav}>
-      <Link to="/#projects">Projects</Link>
-      <Link to="/#experience">Experience</Link>
-      <Link to="/#about">About</Link>
-      <Link to="/#contact">Contact</Link>
+    <nav className={styles.nav} aria-label="Main navigation">
+      {sections.map(({ id, label }) => (
+        <Link
+          key={id}
+          to={`/#${id}`}
+          onClick={() => activateSection(id)}
+          className={activeSectionId === id ? styles.active : undefined}
+          aria-current={activeSectionId === id ? "location" : undefined}
+        >
+          {label}
+        </Link>
+      ))}
     </nav>
   );
 }
