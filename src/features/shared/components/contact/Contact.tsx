@@ -1,8 +1,16 @@
+import type { SubmitEvent } from "react";
+
 export function Contact() {
+
+  function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
+    e.preventDefault();
+    console.log("Sending...")
+  }
+
   return (
     <section id="contact" className="contact">
       <h2>Let's get in touch</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           Email
           <input
