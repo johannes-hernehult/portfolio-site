@@ -1,0 +1,83 @@
+.links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--size-xs);
+    margin-top: auto;
+    padding-top: var(--size-md);
+    border-top: var(--border-muted);
+}
+
+.navbar::before,
+.hero::before {
+    color: var(--color-text-muted);
+    content: "Find me online";
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navbar li > a,
+.hero li > a {
+    display: inline-flex;
+    width: fit-content;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--color-text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: var(--color-border-muted);
+    text-underline-offset: 0.2em;
+    transition:
+        color var(--transition-fast),
+        text-decoration-color var(--transition-fast);
+}
+
+.navbar li > a:hover,
+.navbar li > a:focus-visible,
+.hero li > a:hover,
+.hero li > a:focus-visible {
+    border-color: transparent;
+    background: transparent;
+    color: var(--color-accent-light);
+    box-shadow: none;
+    text-decoration-color: currentColor;
+}
+
+.navbar li > a:focus-visible,
+.hero li > a:focus-visible {
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: var(--size-2xs);
+}
+
+.hero {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        display: none;
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: var(--size-xs);
+        margin-top: var(--size-xl);
+    }
+
+    .hero::before {
+        flex-basis: 100%;
+    }
+}

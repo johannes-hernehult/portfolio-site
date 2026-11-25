@@ -1,5 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router";
 import { useActiveSection } from "../../../hooks/useActiveSection";
+import { SocialLinks } from "../../social-links/SocialLinks";
 import styles from "./styles.module.css";
 
 const sections = [
@@ -31,6 +32,7 @@ export default function Navbar() {
         >
           &lt; Back
         </button>
+        <SocialLinks placement="navbar" />
       </nav>
     );
   }
@@ -48,6 +50,7 @@ export default function Navbar() {
           {label}
         </Link>
       ))}
+      <SocialLinks placement="navbar" />
     </nav>
   );
 }

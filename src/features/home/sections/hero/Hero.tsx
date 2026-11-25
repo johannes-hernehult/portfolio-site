@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 
 import { Link } from "react-router";
+import { SocialLinks } from "../../../shared/components/social-links/SocialLinks";
 
 export default function Hero() {
   return (
@@ -14,6 +15,7 @@ export default function Hero() {
       <Link to="#contact" className="btn">
         <span>Let's connect!</span>
       </Link>
+      <SocialLinks placement="hero" />
     </section>
   );
 }
