@@ -1,4 +1,6 @@
 .hero {
+    position: relative;
+
     padding-block: calc(var(--size-3xl) * 3.1);
     background-size: cover;
     background-position: center;
@@ -27,6 +29,27 @@
 
 .links a {
     text-transform: capitalize;
+}
+
+.tags {
+    position: absolute;
+    bottom: var(--size-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-xs);
+    margin: var(--size-md) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tags li {
+    padding: var(--size-2xs) var(--size-sm);
+    background-color: var(--color-bg);
+    border: var(--border-muted);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-dark);
+    font-size: var(--size-md);
+    line-height: 1.2;
 }
 
 @media screen and (max-width: 900px) {

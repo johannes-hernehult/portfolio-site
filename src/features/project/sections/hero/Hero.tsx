@@ -1,6 +1,14 @@
 import styles from "./styles.module.css";
 
-export default function Hero({ project }) {
+type Project = {
+  title: string;
+  description: string;
+  url?: string;
+  links: { type: string; url: string }[];
+  tags: string[];
+};
+
+export default function Hero({ project }: { project: Project }) {
   const links = project.links.map((link) => (
     <li key={link.type}>
       <a href={link.url} target="_blank" rel="noreferrer" className="btn">
@@ -8,6 +16,7 @@ export default function Hero({ project }) {
       </a>
     </li>
   ));
+  const tags = project.tags.map((tag) => <li key={tag}>{tag}</li>);
 
   return (
     <section
@@ -21,7 +30,11 @@ export default function Hero({ project }) {
       <h1>{project.title}</h1>
       <p>{project.description}</p>
       {links.length > 0 && <ul className={styles.links}>{links}</ul>}
-      {/*Tags listed out here*/}
+      {tags.length > 0 && (
+        <ul className={styles.tags} aria-label="Project tags">
+          {tags}
+        </ul>
+      )}
     </section>
   );
 }
