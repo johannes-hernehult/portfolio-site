@@ -14,8 +14,8 @@ export function Project() {
   return (
     <main className={styles.project}>
       <Hero project={project} />
-      <Gallery project={project} />
       <Overview project={project} />
+      <Gallery project={project} />
       {/*Add a section of related projects or similare projects here*/}
       <Contact />
     </main>
