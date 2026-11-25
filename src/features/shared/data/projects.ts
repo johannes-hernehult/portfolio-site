@@ -180,7 +180,7 @@ export const PROJECTS = [
       {
         order: 4,
         url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
-        altText: "Task details view in the tracker 2",
+        altText: "2 Task details view in the tracker",
       },
     ],
     links: [
