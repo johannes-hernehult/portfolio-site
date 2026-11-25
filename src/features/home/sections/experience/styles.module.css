@@ -23,7 +23,6 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: var(--size-sm);
-    margin-bottom: var(--size-sm);
 }
 
 .header h3 {
