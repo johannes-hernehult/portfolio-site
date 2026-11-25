@@ -84,7 +84,7 @@
     border: var(--border-muted);
     border-radius: var(--radius-lg);
     color: var(--color-text-dark);
-    font-size: var(--size-sm);
+    font-size: var(--size-md);
     line-height: 1.2;
 }
 

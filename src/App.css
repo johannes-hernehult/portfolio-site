@@ -39,7 +39,7 @@ footer {
     padding: var(--size-xs) var(--size-md);
     border-top: var(--border-muted);
     color: var(--color-text-dark);
-    font-size: var(--size-sm);
+    font-size: var(--size-md);
 }
 
 @media screen and (max-width: 900px) {
