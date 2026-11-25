@@ -216,7 +216,6 @@ a {
    ========================================================================== */
 .btn {
     display: inline-flex;
-    min-height: 44px;
     align-items: center;
     justify-content: center;
     padding-inline: var(--size-lg);
@@ -246,7 +245,6 @@ a {
 .btn:hover {
     border-color: var(--color-accent);
     background-color: var(--color-accent);
-    transform: translateY(-1px);
     box-shadow: 0 6px 18px hsla(38, 92%, 50%, 0.22);
 }
 
@@ -256,7 +254,6 @@ a {
 }
 
 .btn:active {
-    transform: translateY(0);
     box-shadow: none;
 }
 
