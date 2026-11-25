@@ -83,7 +83,7 @@ textarea {
 
     --color-text: hsl(240 5% 96%);
     --color-text-dark: hsl(240 5% 66%);
-    --color-text-muted: hsl(240 5% 45%);
+    --color-text-muted: hsl(240 5% 50%);
 
     --color-education: hsl(225 75% 60%);
     --color-project: hsl(100 75% 44%);
@@ -128,7 +128,7 @@ textarea {
     --radius-md: var(--size-xs);
     --radius-lg: var(--size-md);
     --border: var(--size-3xs) solid var(--color-border);
-    --border-muted: 2px solid var(--color-border-muted);
+    --border-muted: var(--size-3xs) solid var(--color-border-muted);
     --border-primary: var(--size-3xs) solid var(--color-border-accent);
     --sidebar-width: 300px;
 }
@@ -142,7 +142,7 @@ html {
     color: var(--color-text);
     font-family: sans-serif;
     font-size: var(--size-md);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
     line-height: 1.66;
     overscroll-behavior: none;
     -webkit-text-size-adjust: 100%;
@@ -161,7 +161,7 @@ h4 {
     width: fit-content;
     position: relative;
     margin-bottom: var(--size-md);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.025em;
     line-height: 1.2;
 }
 
