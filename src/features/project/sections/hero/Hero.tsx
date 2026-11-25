@@ -1,11 +1,13 @@
 import styles from "./styles.module.css";
 
 export default function Hero({ project }) {
-  const links = project.links.map(link => (
-    <li>
-      <a href={link.url} target="_blank">{link.type}</a>
+  const links = project.links.map((link) => (
+    <li key={link.type}>
+      <a href={link.url} target="_blank">
+        {link.type}
+      </a>
     </li>
-  ))
+  ));
 
   return (
     <section
