@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "./experiences";
+import { EXPERIENCES } from "../../../shared/data/experiences";
 import styles from "./styles.module.css";
 
 function formatDateRange(from, to) {
