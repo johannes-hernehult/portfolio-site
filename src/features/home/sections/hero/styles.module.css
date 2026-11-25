@@ -4,7 +4,7 @@
     padding-block: calc(var(--size-3xl) * 3.1);
     background:
         linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),
-        url("./images/hero_bg.svg");
+        url("./images/hero_bg.webp");
     background-size: cover;
     background-position: center;
 }
