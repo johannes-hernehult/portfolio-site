@@ -20,18 +20,47 @@
 }
 
 .cta {
-    padding-inline: var(--size-md);
-    padding-block: var(--size-2xs);
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--size-lg);
+    padding-block: var(--size-xs);
+    border: var(--size-3xs) solid var(--color-accent);
+    border-radius: var(--radius-md);
+    font-weight: bold;
     line-height: 1;
     text-decoration: none;
-    color: var(--color-accent-light);
-    border: var(--border-primary);
-    margin-right: var(--size-md);
-    font-weight: bold;
+    transition:
+        transform 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease;
+
+    span {
+        background: var(--gradient-accent);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+    }
 
     &:hover {
-        background-color: var(--color-accent);
-        color: var(--color-bg-dark);
+        border-color: var(--color-accent);
+        background: var(--color-accent);
+
+        span {
+            background: none;
+            color: var(--color-bg-dark);
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-accent-light);
+        outline-offset: var(--size-2xs);
     }
 }
 

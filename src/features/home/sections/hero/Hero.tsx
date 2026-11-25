@@ -12,7 +12,7 @@ export default function Hero() {
       </p>
 
       <Link to="#contact" className={styles.cta}>
-        Let's connect!
+        <span>Let's connect!</span>
       </Link>
     </section>
   );
