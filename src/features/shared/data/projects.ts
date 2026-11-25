@@ -9,6 +9,10 @@ export const PROJECTS = [
     cardSize: "large", // Spans 8 columns, 2 rows
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Screenshot of the Portfolio Website",
+    overview: [
+      "When architecting responsive interfaces, fluid grid tracks and custom CSS properties allow components to adapt seamlessly across viewport breakpoints without brittle media-query overrides. By decoupling design tokens from structural markup, teams can iterate on typography, spacing scales, and accessible focus states while maintaining zero layout shift during asynchronous hydration.",
+      "Refactoring legacy state management into modular hooks eliminates prop-drilling bottlenecks and keeps render cycles predictable across deeply nested component trees.",
+    ],
     images: [
       {
         order: 1,
@@ -36,6 +40,9 @@ export const PROJECTS = [
     cardSize: "default", // Spans 4 columns, 1 row
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Terminal window running C# app",
+    overview: [
+      "Modern web applications rely on deterministic build pipelines, strict static typing, and incremental caching strategies to deliver sub-second interaction latency at scale. Rather than shipping monolithic client payloads, progressive architectures split execution boundaries between pre-rendered static shells and lightweight interactive islands. Every commit passes through automated linting, unit assertions, and visual regression diffs before merging into production, ensuring that dependency upgrades or stylesheet refactors never silently degrade runtime performance. Behind the scenes, structured telemetry and distributed tracing surface memory leaks and cold-start bottlenecks long before they disrupt end-user workflows.",
+    ],
     images: [
       {
         order: 1,
@@ -68,6 +75,10 @@ export const PROJECTS = [
     cardSize: "default",
     url: "https://placehold.co/400x400/1e293b/ffffff?text=CV+Website",
     altText: "Preview of CV Website",
+    overview: [
+      "Modern web applications rely on deterministic build pipelines, strict static typing, and incremental caching strategies to deliver sub-second interaction latency at scale.",
+      "Refactoring legacy state management into modular hooks eliminates prop-drilling bottlenecks and keeps render cycles predictable across deeply nested component trees.",
+    ],
     images: [
       {
         order: 1,
@@ -105,6 +116,10 @@ export const PROJECTS = [
     cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Weather Dashboard forecast",
+    overview: [
+      "Modern web applications rely on deterministic build pipelines, strict static typing, and incremental caching strategies to deliver sub-second interaction latency at scale.",
+      "Refactoring legacy state management into modular hooks eliminates prop-drilling bottlenecks and keeps render cycles predictable across deeply nested component trees.",
+    ],
     images: [
       {
         order: 1,
@@ -142,6 +157,10 @@ export const PROJECTS = [
     cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Kanban board columns",
+    overview: [
+      "Modern web applications rely on deterministic build pipelines, strict static typing, and incremental caching strategies to deliver sub-second interaction latency at scale.",
+      "Refactoring legacy state management into modular hooks eliminates prop-drilling bottlenecks and keeps render cycles predictable across deeply nested component trees.",
+    ],
     images: [
       {
         order: 1,
