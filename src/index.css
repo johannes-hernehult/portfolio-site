@@ -160,9 +160,19 @@ h3,
 h4 {
     width: fit-content;
     position: relative;
-    margin-bottom: var(--size-md);
     letter-spacing: 0.025em;
     line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--size-3xl);
+}
+
+h2 {
+    font-size: var(--size-2xl);
+}
+h3 {
+    font-size: var(--size-xl);
 }
 
 h2::after {
@@ -170,7 +180,7 @@ h2::after {
     position: absolute;
     inset-inline: 0;
     bottom: -6px;
-    height: 1px;
+    height: 2px;
     background: var(--gradient-accent);
 }
 

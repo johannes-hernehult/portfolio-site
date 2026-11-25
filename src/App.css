@@ -16,6 +16,9 @@ main > section {
 
 main > section:not(:first-of-type) {
     max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-lg);
 }
 
 footer {
