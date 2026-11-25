@@ -10,6 +10,14 @@ main {
     margin-left: var(--sidebar-width);
 }
 
+main > section {
+    padding: var(--size-xl);
+}
+
+main > section:not(:first-of-type) {
+    max-width: 1080px;
+}
+
 footer {
     height: var(--size-3xl);
     margin-top: auto;
@@ -20,14 +28,6 @@ footer {
 
     padding-inline: var(--size-md);
     padding-block: var(--size-xs);
-}
-
-main > section {
-    padding: var(--size-xl);
-}
-
-main > section:not(:first-of-type) {
-    max-width: 1080px;
 }
 
 @media screen and (max-width: 900px) {
