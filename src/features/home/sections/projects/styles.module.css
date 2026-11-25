@@ -28,7 +28,6 @@
     color: var(--color-text);
 }
 
-/* Layer 1: Desaturated background image */
 .card::before {
     content: "";
     position: absolute;
@@ -37,16 +36,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: saturate(0.5);
+    filter: saturate(0.5) brightness(0.75);
     transition: filter 0.3s ease;
 }
 
-/* Optional: restore full color on hover (remove if you want it always desaturated) */
 .card:hover::before {
-    filter: saturate(1);
+    filter: saturate(1) brightness(1);
 }
 
-/* Layer 2: Dark gradient overlay */
 .card::after {
     content: "";
     position: absolute;
