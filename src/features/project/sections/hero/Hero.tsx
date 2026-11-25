@@ -14,6 +14,7 @@ export default function Hero({ project }) {
     >
       <h1>{project.title}</h1>
       <p>{project.description}</p>
+      {/*Add Links here to live app and repo*/}
     </section>
   );
 }
