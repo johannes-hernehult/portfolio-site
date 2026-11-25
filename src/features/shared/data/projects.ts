@@ -5,6 +5,7 @@ export const PROJECTS = [
     title: "Portfolio Website",
     description:
       "A responsive personal portfolio built with React and CSS Modules.",
+    tags: ["React", "CSS Modules", "Responsive Design"],
     cardSize: "large", // Spans 8 columns, 2 rows
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Screenshot of the Portfolio Website",
@@ -31,7 +32,7 @@ export const PROJECTS = [
     slug: "csharp-console-app",
     title: "C# Console Inventory App",
     description: "Command-line inventory system with file persistence.",
-    tags: ["React", "Frontend", "Zod", "CSS"],
+    tags: ["C#", "Console App", "File Persistence", "Inventory"],
     cardSize: "default", // Spans 4 columns, 1 row
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Terminal window running C# app",
@@ -63,7 +64,7 @@ export const PROJECTS = [
     slug: "interactive-cv",
     title: "Interactive CV Website",
     description: "Printable digital resume with dark mode.",
-    tags: ["React", "Frontend", "Zod", "CSS"],
+    tags: ["React", "Digital Resume", "Dark Mode", "Print Styles"],
     cardSize: "default",
     url: "https://placehold.co/400x400/1e293b/ffffff?text=CV+Website",
     altText: "Preview of CV Website",
@@ -100,7 +101,7 @@ export const PROJECTS = [
     slug: "weather-dashboard",
     title: "Weather Forecast Dashboard",
     description: "Real-time 5-day forecasts via OpenWeather API.",
-    tags: ["React", "Frontend", "Zod", "CSS"],
+    tags: ["OpenWeather API", "Forecasting", "Weather Data", "Dashboard"],
     cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Weather Dashboard forecast",
@@ -137,7 +138,7 @@ export const PROJECTS = [
     slug: "task-tracker",
     title: "Kanban Task Tracker",
     description: "Drag-and-drop task board with local storage.",
-    tags: ["React", "Frontend", "Zod", "CSS"],
+    tags: ["Kanban", "Drag and Drop", "Local Storage", "Task Management"],
     cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Kanban board columns",
