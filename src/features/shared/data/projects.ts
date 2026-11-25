@@ -5,14 +5,24 @@ export const PROJECTS = [
     title: "Portfolio Website",
     description:
       "A responsive personal portfolio built with React and CSS Modules.",
+    cardSize: "large", // Spans 8 columns, 2 rows
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Screenshot of the Portfolio Website",
-    cardSize: "large", // Spans 8 columns, 2 rows
     images: [
       {
         order: 1,
         url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
         altText: "Cover image for portfolio project",
+      },
+    ],
+    links: [
+      {
+        type: "repo",
+        url: "https://github.com/johannes-hernehult/portfolio-site",
+      },
+      {
+        type: "live",
+        url: "https://cv.jhernehult.com/",
       },
     ],
   },
@@ -21,9 +31,10 @@ export const PROJECTS = [
     slug: "csharp-console-app",
     title: "C# Console Inventory App",
     description: "Command-line inventory system with file persistence.",
+    tags: ["React", "Frontend", "Zod", "CSS"],
+    cardSize: "default", // Spans 4 columns, 1 row
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Terminal window running C# app",
-    cardSize: "default", // Spans 4 columns, 1 row
     images: [
       {
         order: 1,
@@ -36,15 +47,26 @@ export const PROJECTS = [
         altText: "Inventory management screen in the console app",
       },
     ],
+    links: [
+      {
+        type: "repo",
+        url: "https://example.com/projects/csharp-console-app/repo",
+      },
+      {
+        type: "live",
+        url: "https://example.com/projects/csharp-console-app/live",
+      },
+    ],
   },
   {
     id: 3,
     slug: "interactive-cv",
     title: "Interactive CV Website",
     description: "Printable digital resume with dark mode.",
+    tags: ["React", "Frontend", "Zod", "CSS"],
+    cardSize: "default",
     url: "https://placehold.co/400x400/1e293b/ffffff?text=CV+Website",
     altText: "Preview of CV Website",
-    cardSize: "default",
     images: [
       {
         order: 1,
@@ -62,15 +84,26 @@ export const PROJECTS = [
         altText: "Print preview of the digital resume",
       },
     ],
+    links: [
+      {
+        type: "repo",
+        url: "https://example.com/projects/interactive-cv/repo",
+      },
+      {
+        type: "live",
+        url: "https://example.com/projects/interactive-cv/live",
+      },
+    ],
   },
   {
     id: 4,
     slug: "weather-dashboard",
     title: "Weather Forecast Dashboard",
     description: "Real-time 5-day forecasts via OpenWeather API.",
+    tags: ["React", "Frontend", "Zod", "CSS"],
+    cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Weather Dashboard forecast",
-    cardSize: "wide", // Spans 6 columns
     images: [
       {
         order: 1,
@@ -88,15 +121,26 @@ export const PROJECTS = [
         altText: "Current weather conditions on the dashboard",
       },
     ],
+    links: [
+      {
+        type: "repo",
+        url: "https://example.com/projects/weather-dashboard/repo",
+      },
+      {
+        type: "live",
+        url: "https://example.com/projects/weather-dashboard/live",
+      },
+    ],
   },
   {
     id: 5,
     slug: "task-tracker",
     title: "Kanban Task Tracker",
     description: "Drag-and-drop task board with local storage.",
+    tags: ["React", "Frontend", "Zod", "CSS"],
+    cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Kanban board columns",
-    cardSize: "wide", // Spans 6 columns
     images: [
       {
         order: 1,
@@ -117,6 +161,16 @@ export const PROJECTS = [
         order: 4,
         url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
         altText: "Task details view in the tracker",
+      },
+    ],
+    links: [
+      {
+        type: "repo",
+        url: "https://example.com/projects/task-tracker/repo",
+      },
+      {
+        type: "live",
+        url: "https://example.com/projects/task-tracker/live",
       },
     ],
   },
