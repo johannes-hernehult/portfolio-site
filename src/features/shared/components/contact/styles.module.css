@@ -48,7 +48,7 @@
     flex-grow: 1;
 }
 
-.form input.submitButton {
+.form button.submitButton {
     display: inline-flex;
     min-height: 44px;
     align-items: center;
@@ -57,36 +57,42 @@
     padding-block: var(--size-xs);
     border: var(--size-3xs) solid var(--color-accent);
     border-radius: var(--radius-md);
-    background: var(--gradient-accent);
-    background-clip: text;
-    color: transparent;
+    appearance: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
     font-weight: bold;
-    font-size: inherit;
-    font-family: inherit;
     line-height: 1;
-    letter-spacing: normal;
     cursor: pointer;
-    -webkit-background-clip: text;
     transition:
         transform 160ms ease,
         box-shadow 160ms ease,
         background-color 160ms ease;
 }
 
-.form input.submitButton:hover {
-    border-color: var(--color-accent);
-    background: var(--color-accent);
-    background-clip: border-box;
-    color: var(--color-bg-dark);
-    -webkit-background-clip: border-box;
+.form button.submitButton span {
+    background: var(--gradient-accent);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
 }
 
-.form input.submitButton:active {
+.form button.submitButton:hover {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+
+    span {
+        background: none;
+        color: var(--color-bg-dark);
+    }
+}
+
+.form button.submitButton:active {
     transform: translateY(0);
     box-shadow: none;
 }
 
-.form input.submitButton:focus-visible {
+.form button.submitButton:focus-visible {
     outline: 2px solid var(--color-accent-light);
     outline-offset: var(--size-2xs);
 }

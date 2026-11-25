@@ -41,11 +41,9 @@ export function Contact() {
           ></textarea>
         </label>
 
-        <input
-          type="submit"
-          value="Send"
-          className={styles.submitButton}
-        />
+        <button type="submit" className={styles.submitButton}>
+          <span>Send</span>
+        </button>
       </form>
     </section>
   );
