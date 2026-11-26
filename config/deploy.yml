@@ -1,0 +1,30 @@
+service: portfolio-site
+image: portfolio-site
+
+servers:
+  web:
+    hosts:
+      - 62.238.34.82
+
+ssh:
+  user: jh
+  port: 1995
+  keys:
+    - ~/.ssh/id_github
+
+proxy:
+  ssl: true
+  host: jhernehult.com
+  app_port: 8080
+  healthcheck:
+    path: /up
+
+registry:
+  server: localhost:5555
+
+builder:
+  arch: amd64
+  secrets:
+    - VITE_EMAILJS_SERVICE_ID
+    - VITE_EMAILJS_TEMPLATE_ID
+    - VITE_EMAILJS_PUBLIC_KEY
