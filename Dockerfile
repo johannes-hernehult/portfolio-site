@@ -6,6 +6,9 @@ COPY . .
 RUN --mount=type=secret,id=VITE_EMAILJS_SERVICE_ID \
     --mount=type=secret,id=VITE_EMAILJS_TEMPLATE_ID \
     --mount=type=secret,id=VITE_EMAILJS_PUBLIC_KEY \
+    test -s /run/secrets/VITE_EMAILJS_SERVICE_ID && \
+    test -s /run/secrets/VITE_EMAILJS_TEMPLATE_ID && \
+    test -s /run/secrets/VITE_EMAILJS_PUBLIC_KEY && \
     VITE_EMAILJS_SERVICE_ID="$(cat /run/secrets/VITE_EMAILJS_SERVICE_ID)" \
     VITE_EMAILJS_TEMPLATE_ID="$(cat /run/secrets/VITE_EMAILJS_TEMPLATE_ID)" \
     VITE_EMAILJS_PUBLIC_KEY="$(cat /run/secrets/VITE_EMAILJS_PUBLIC_KEY)" \
