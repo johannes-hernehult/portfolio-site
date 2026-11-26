@@ -58,6 +58,7 @@
     border: 0;
     border-radius: var(--radius-md);
     background: var(--surface-card);
+    color: var(--color-text);
     box-shadow: var(--shadow-card);
 }
 
@@ -72,12 +73,26 @@
     object-fit: contain;
 }
 
+.caption {
+    margin: var(--size-sm) auto 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.galleryCaption {
+    margin: var(--size-sm) 0;
+    color: var(--color-text);
+    text-align: center;
+    font-style: italic;
+}
+
 .navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--size-sm);
     margin-top: var(--size-sm);
+    color: var(--color-text-muted);
 }
 
 .navigationButton {
@@ -87,6 +102,7 @@
     background: var(--surface-card);
     color: inherit;
     cursor: pointer;
+    color: var(--color-text);
 }
 
 .navigationButton:focus-visible,
