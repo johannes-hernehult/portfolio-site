@@ -1,7 +1,22 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type MouseEvent } from "react";
 import { useLocation, useNavigationType } from "react-router";
 
-export function saveProjectReturnScroll(locationKey: string, scrollY: number) {
+export type ProjectLinkState = {
+  fromHome: true;
+};
+
+export const PROJECT_LINK_STATE: ProjectLinkState = { fromHome: true };
+
+export function cameFromHome(state: unknown): boolean {
+  return (
+    typeof state === "object" &&
+    state !== null &&
+    "fromHome" in state &&
+    Boolean(state.fromHome)
+  );
+}
+
+function saveProjectReturnScroll(locationKey: string, scrollY: number) {
   try {
     window.sessionStorage.setItem(
       `project-return-scroll:${locationKey}`,
@@ -12,7 +27,7 @@ export function saveProjectReturnScroll(locationKey: string, scrollY: number) {
   }
 }
 
-export function readProjectReturnScroll(locationKey: string) {
+function readProjectReturnScroll(locationKey: string) {
   try {
     return window.sessionStorage.getItem(`project-return-scroll:${locationKey}`);
   } catch {
@@ -20,7 +35,23 @@ export function readProjectReturnScroll(locationKey: string) {
   }
 }
 
-export function useScrollToRef() {
+export function useRememberHomeScroll() {
+  const location = useLocation();
+
+  return (event: MouseEvent<HTMLAnchorElement>) => {
+    if (
+      event.button === 0 &&
+      !event.metaKey &&
+      !event.ctrlKey &&
+      !event.shiftKey &&
+      !event.altKey
+    ) {
+      saveProjectReturnScroll(location.key, window.scrollY);
+    }
+  };
+}
+
+export function useScrollOnNavigate() {
   const { pathname, hash, key } = useLocation();
   const navigationType = useNavigationType();
   const previousPathname = useRef<string | null>(null);
@@ -49,20 +80,9 @@ export function useScrollToRef() {
     if (hash) {
       const targetElement = document.getElementById(hash.slice(1));
       if (targetElement) {
-        const scrollMarginTop =
-          Number.parseFloat(
-            window.getComputedStyle(targetElement).scrollMarginTop,
-          ) || 0;
-        const destination = Math.max(
-          0,
-          targetElement.getBoundingClientRect().top +
-            window.scrollY -
-            scrollMarginTop,
-        );
-
-        window.scrollTo({
-          top: destination,
+        targetElement.scrollIntoView({
           behavior: pathnameChanged ? "instant" : "smooth",
+          block: "start",
         });
       }
     } else {

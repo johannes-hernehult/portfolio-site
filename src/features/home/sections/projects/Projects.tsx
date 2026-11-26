@@ -1,10 +1,13 @@
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import styles from "./styles.module.css";
 import { PROJECTS } from "../../../shared/data/projects";
-import { saveProjectReturnScroll } from "../../../shared/hooks/useScrollToRef";
+import {
+  PROJECT_LINK_STATE,
+  useRememberHomeScroll,
+} from "../../../shared/hooks/useScrollOnNavigate";
 
-export default function Projects() {
-  const location = useLocation();
+export function Projects() {
+  const rememberHomeScroll = useRememberHomeScroll();
   const projectItems = PROJECTS.map((project) => (
     <li
       key={project.id}
@@ -13,18 +16,8 @@ export default function Projects() {
     >
       <Link
         to={`/project/${project.slug}`}
-        state={{ fromHome: true }}
-        onClick={(event) => {
-          if (
-            event.button === 0 &&
-            !event.metaKey &&
-            !event.ctrlKey &&
-            !event.shiftKey &&
-            !event.altKey
-          ) {
-            saveProjectReturnScroll(location.key, window.scrollY);
-          }
-        }}
+        state={PROJECT_LINK_STATE}
+        onClick={rememberHomeScroll}
         className={styles.link}
       >
         <h3>{project.title}</h3>
