@@ -1,10 +1,39 @@
-import type { SubmitEvent } from "react";
+import { useState, type SubmitEvent } from "react";
+import { sendContactEmail } from "./emailService";
 import styles from "./styles.module.css";
 
+type Feedback = {
+  type: "success" | "error";
+  message: string;
+};
+
 export function Contact() {
-  function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
+  const [isSending, setIsSending] = useState(false);
+  const [feedback, setFeedback] = useState<Feedback | null>(null);
+
+  async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("Sending...");
+
+    const form = e.currentTarget;
+    setIsSending(true);
+    setFeedback(null);
+
+    try {
+      await sendContactEmail(form);
+      form.reset();
+      setFeedback({
+        type: "success",
+        message: "Thanks for reaching out! Your message has been sent.",
+      });
+    } catch (error) {
+      console.error("Failed to send contact form:", error);
+      setFeedback({
+        type: "error",
+        message: "Your message couldn't be sent. Please try again later.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
@@ -18,7 +47,8 @@ export function Contact() {
             name="email"
             id="email"
             placeholder="example@mail.com"
-            aria-required="true"
+            autoComplete="email"
+            required
           />
         </label>
         <label>
@@ -28,7 +58,8 @@ export function Contact() {
             name="name"
             id="name"
             placeholder="My Name"
-            aria-required="true"
+            autoComplete="name"
+            required
           />
         </label>
         <label>
@@ -37,13 +68,22 @@ export function Contact() {
             name="message"
             id="message"
             placeholder="Write your message here..."
-            aria-required="true"
+            required
           ></textarea>
         </label>
 
-        <button type="submit" className="btn">
-          <span>Send</span>
+        <button type="submit" className="btn" disabled={isSending}>
+          <span>{isSending ? "Sending..." : "Send"}</span>
         </button>
+        {feedback && (
+          <p
+            className={styles.feedback}
+            data-type={feedback.type}
+            role={feedback.type === "error" ? "alert" : "status"}
+          >
+            {feedback.message}
+          </p>
+        )}
       </form>
     </section>
   );

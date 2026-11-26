@@ -55,3 +55,10 @@
     flex-basis: 45%;
     flex-grow: 1;
 }
+
+.feedback {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--color-text-dark);
+    font-size: var(--size-md);
+}
