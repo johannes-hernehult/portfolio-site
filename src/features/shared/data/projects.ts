@@ -37,7 +37,7 @@ export const PROJECTS = [
         altText: "Delete an entry modal",
       },
       {
-        order: 2,
+        order: 4,
         url: "/images/projects/cyb-settings-user-profile.webp",
         altText: "User profile section of settings page",
       },
@@ -61,8 +61,8 @@ export const PROJECTS = [
       "Responsive developer portfolio built with React, TypeScript, CSS Modules, and fluid grid layouts.",
     tags: ["React", "TypeScript", "CSS Modules", "Responsive Design"],
     cardSize: "default", // Spans 4 columns, 1 row
-    url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
-    altText: "Screenshot of the Portfolio Website",
+    url: "/images/projects/portfolio-hero.webp",
+    altText: "Cover image of Portfolio Website",
     overview: [
       "When architecting responsive interfaces, fluid grid tracks and custom CSS properties allow components to adapt seamlessly across viewport breakpoints without brittle media-query overrides. By decoupling design tokens from structural markup, teams can iterate on typography, spacing scales, and accessible focus states while maintaining zero layout shift during asynchronous hydration.",
       "Refactoring legacy state management into modular hooks eliminates prop-drilling bottlenecks and keeps render cycles predictable across deeply nested component trees.",
@@ -70,8 +70,43 @@ export const PROJECTS = [
     images: [
       {
         order: 1,
-        url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
-        altText: "Cover image for portfolio project",
+        url: "/images/projects/portfolio-hero.webp",
+        altText: "Hero section",
+      },
+      {
+        order: 2,
+        url: "/images/projects/portfolio-projects.webp",
+        altText: "Projects section",
+      },
+      {
+        order: 3,
+        url: "/images/projects/portfolio-experiences.webp",
+        altText: "Experiences section",
+      },
+      {
+        order: 4,
+        url: "/images/projects/portfolio-about.webp",
+        altText: "About section",
+      },
+      {
+        order: 5,
+        url: "/images/projects/portfolio-contact.webp",
+        altText: "Contact section",
+      },
+      {
+        order: 6,
+        url: "/images/projects/portfolio-project-hero.webp",
+        altText: "Project hero section",
+      },
+      {
+        order: 7,
+        url: "/images/projects/portfolio-project-gallery.webp",
+        altText: "Project gallery section",
+      },
+      {
+        order: 8,
+        url: "/images/projects/portfolio-project-contact.webp",
+        altText: "Project contact section",
       },
     ],
     links: [
@@ -101,8 +136,8 @@ export const PROJECTS = [
       "Kamal",
     ],
     cardSize: "default", // Spans 4 columns, 1 row
-    url: "/images/projects/cv-cover.webp",
-    altText: "Preview of the CV Website",
+    url: "/images/projects/cv-profile-skills.webp",
+    altText: "Cover image of CV website",
     overview: [
       "Built as a zero-dependency static site using semantic HTML, a single token-driven vanilla stylesheet, and progressive-enhancement JavaScript—no build step required. Dedicated @page and @media print rules pair with a one-click download button to format the page cleanly as a printable A4 resume.",
       "Lightweight scripts add experience sorting (by newest, oldest, or type) and client-side contact obfuscation with graceful <noscript> fallbacks. The site runs in an unprivileged Alpine Nginx container with asset caching, a /up healthcheck endpoint, and automated SSL deployment via Kamal.",
@@ -110,13 +145,18 @@ export const PROJECTS = [
     images: [
       {
         order: 1,
-        url: "/images/projects/cv-full.webp",
-        altText: "CV website in full",
+        url: "/images/projects/cv-profile-skills.webp",
+        altText: "Profile and skills section",
       },
       {
         order: 2,
+        url: "/images/projects/cv-experience.webp",
+        altText: "Experience section",
+      },
+      {
+        order: 3,
         url: "/images/projects/cv-print.webp",
-        altText: "Print of CV website",
+        altText: "Print / save as PDF preview",
       },
     ],
     links: [
@@ -144,7 +184,7 @@ export const PROJECTS = [
       "Clean Architecture",
     ],
     cardSize: "wide", // Spans 6 columns
-    url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
+    url: "/images/projects/toodoo.png",
     altText: "Terminal window running the TooDoo C# console task manager",
     overview: [
       "TooDoo is a terminal task manager built with C# and .NET 10 for tracking tasks by title, due date, and project. It features separate to-do and completed lists, sorting by due date or project, short ambiguity-free 4-character task IDs, and an ANSI color-coded table renderer.",
@@ -153,13 +193,8 @@ export const PROJECTS = [
     images: [
       {
         order: 1,
-        url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
-        altText: "Cover image for TooDoo console task manager",
-      },
-      {
-        order: 2,
-        url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
-        altText: "2 Cover image for TooDoo console task manager",
+        url: "/images/projects/toodoo.png",
+        altText: "Main menu",
       },
     ],
     links: [
