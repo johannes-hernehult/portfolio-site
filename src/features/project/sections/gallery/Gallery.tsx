@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
+import type { Project } from "../../../shared/types";
 import { useGalleryLightbox } from "./useGalleryLightbox";
 import styles from "./styles.module.css";
 
 const MOBILE_VIEW_QUERY = "(max-width: 600px)";
 
 type GalleryProps = {
-  project: {
-    images: { order: number; url: string; altText: string }[];
-  };
+  project: Project;
 };
 
 export function Gallery({ project }: GalleryProps) {
@@ -45,7 +44,7 @@ export function Gallery({ project }: GalleryProps) {
   }, [isMobile, dialogRef]);
 
   const galleryItems = images.map((image, index) => (
-    <li key={image.altText.slice(0, 20)}>
+    <li key={image.url}>
       {isMobile ? (
         <>
           <img src={image.url} alt={image.altText} />
@@ -79,36 +78,38 @@ export function Gallery({ project }: GalleryProps) {
           onClick={handleDialogClick}
           onClose={handleDialogClose}
         >
-          <button
-            className={styles.closeButton}
-            type="button"
-            onClick={closeDialog}
-            aria-label="Close full-size image"
-          >
-            ×
-          </button>
-          <img src={selectedImage.url} alt={selectedImage.altText} />
-          <p className={styles.caption}>{selectedImage.altText}</p>
-          <div className={styles.navigation}>
+          <div className={styles.lightboxContent}>
             <button
-              className={styles.navigationButton}
+              className={styles.closeButton}
               type="button"
-              onClick={() => navigateImage(-1)}
-              aria-label="Previous image"
+              onClick={closeDialog}
+              aria-label="Close full-size image"
             >
-              ← Previous
+              ×
             </button>
-            <span aria-live="polite">
-              {(selectedIndex ?? 0) + 1} / {images.length}
-            </span>
-            <button
-              className={styles.navigationButton}
-              type="button"
-              onClick={() => navigateImage(1)}
-              aria-label="Next image"
-            >
-              Next →
-            </button>
+            <img src={selectedImage.url} alt={selectedImage.altText} />
+            <p className={styles.caption}>{selectedImage.altText}</p>
+            <div className={styles.navigation}>
+              <button
+                className={styles.navigationButton}
+                type="button"
+                onClick={() => navigateImage(-1)}
+                aria-label="Previous image"
+              >
+                ← Previous
+              </button>
+              <span aria-live="polite">
+                {(selectedIndex ?? 0) + 1} / {images.length}
+              </span>
+              <button
+                className={styles.navigationButton}
+                type="button"
+                onClick={() => navigateImage(1)}
+                aria-label="Next image"
+              >
+                Next →
+              </button>
+            </div>
           </div>
         </dialog>
       )}

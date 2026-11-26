@@ -51,7 +51,7 @@
     max-width: 95vw;
     max-height: 95vh;
     margin: 0;
-    padding: 3rem 1rem 1rem;
+    padding: 0;
     overflow: auto;
     box-sizing: border-box;
     transform: translate(-50%, -50%);
@@ -64,6 +64,10 @@
 
 .lightbox::backdrop {
     background: rgb(0 0 0 / 0.8);
+}
+
+.lightboxContent {
+    padding: 3rem 1rem 1rem;
 }
 
 .lightbox img {
