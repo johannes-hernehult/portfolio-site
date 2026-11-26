@@ -9,10 +9,6 @@
 
 .grid li {
     overflow: hidden;
-    border: var(--border-muted);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-card);
-    background: var(--surface-card);
 }
 
 .grid li:first-of-type:not(:only-child) {
@@ -42,19 +38,11 @@
 }
 
 .lightbox {
-    position: fixed;
-    inset: auto;
-    top: 50%;
-    left: 50%;
-    width: fit-content;
-    height: fit-content;
     max-width: 95vw;
     max-height: 95vh;
-    margin: 0;
     padding: 0;
     overflow: auto;
     box-sizing: border-box;
-    transform: translate(-50%, -50%);
     border: 0;
     border-radius: var(--radius-md);
     background: var(--surface-card);
@@ -63,7 +51,7 @@
 }
 
 .lightbox::backdrop {
-    background: rgb(0 0 0 / 0.8);
+    background: var(--color-scrim);
 }
 
 .lightboxContent {
@@ -104,8 +92,6 @@
     border: var(--border-muted);
     border-radius: var(--radius-md);
     background: var(--surface-card);
-    color: inherit;
-    cursor: pointer;
     color: var(--color-text);
 }
 
@@ -125,7 +111,6 @@
     color: inherit;
     font-size: 2rem;
     line-height: 1;
-    cursor: pointer;
 }
 
 /* Must match MOBILE_VIEW_QUERY in Gallery.tsx (600px). */

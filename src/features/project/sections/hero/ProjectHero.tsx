@@ -1,3 +1,4 @@
+import type * as React from "react";
 import type { Project } from "../../../shared/types";
 import styles from "./styles.module.css";
 
@@ -9,16 +10,16 @@ export function ProjectHero({ project }: { project: Project }) {
       </a>
     </li>
   ));
-  const tags = project.tags.map((tag) => <li key={tag}>{tag}</li>);
+  const tags = project.tags.map((tag) => (
+    <li key={tag} className="pill">
+      {tag}
+    </li>
+  ));
 
   return (
     <section
-      className={styles.hero}
-      style={{
-        backgroundImage: project.url
-          ? `linear-gradient(180deg, rgba(10, 10, 14, 0.75) 0%, rgba(10, 10, 14, 0.95) 100%), url("${project.url}")`
-          : undefined,
-      }}
+      className={`${styles.hero} page-hero`}
+      style={{ "--hero-image": `url("${project.url}")` } as React.CSSProperties}
     >
       <h1>{project.title}</h1>
       <p>{project.description}</p>

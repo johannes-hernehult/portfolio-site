@@ -10,7 +10,7 @@ export function Overview({ project }: OverviewProps) {
   ));
 
   return (
-    <section>
+    <section className="content-section">
       <h2>Overview</h2>
       {paragraphs}
     </section>

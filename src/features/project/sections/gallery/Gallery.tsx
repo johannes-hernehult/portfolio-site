@@ -34,10 +34,15 @@ export function Gallery({ project }: GalleryProps) {
   }, [isMobile, dialogRef]);
 
   const galleryItems = images.map((image, index) => (
-    <li key={image.url}>
+    <li key={image.url} className="surface-card">
       {isMobile ? (
         <>
-          <img src={image.url} alt={image.altText} />
+          <img
+            src={image.url}
+            alt={image.altText}
+            loading="lazy"
+            decoding="async"
+          />
           <p className={styles.galleryCaption} aria-hidden="true">
             {image.altText}
           </p>
@@ -49,14 +54,19 @@ export function Gallery({ project }: GalleryProps) {
           onClick={() => openImage(index)}
           aria-label={`View full-size image: ${image.altText}`}
         >
-          <img src={image.url} alt={image.altText} />
+          <img
+            src={image.url}
+            alt={image.altText}
+            loading="lazy"
+            decoding="async"
+          />
         </button>
       )}
     </li>
   ));
 
   return (
-    <section className={styles.gallery}>
+    <section className="content-section">
       <h2>Gallery</h2>
       <ul className={styles.grid}>{galleryItems}</ul>
       {selectedImage && (
