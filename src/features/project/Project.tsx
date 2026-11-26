@@ -2,13 +2,14 @@ import { useParams } from "react-router";
 import Hero from "./sections/hero/Hero";
 import { PROJECTS } from "../shared/data/projects";
 import { Contact } from "../shared/components/contact";
+import { NotFound } from "../shared/components/not-found";
 import { Gallery } from "./sections/gallery/Gallery";
 import Overview from "./sections/overview/Overview";
 
 export function Project() {
   const { slug } = useParams();
   const project = PROJECTS.find((project) => project.slug === slug);
-  if (!project) return null;
+  if (!project) return <NotFound />;
 
   return (
     <main>
