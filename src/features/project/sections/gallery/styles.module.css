@@ -26,8 +26,12 @@
 }
 
 .imageButton:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: -3px;
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: -4px;
+}
+
+.grid li:has(.imageButton:focus-visible) {
+    border-color: var(--color-border-accent);
 }
 
 .grid img {
@@ -97,8 +101,8 @@
 
 .navigationButton:focus-visible,
 .closeButton:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: var(--size-2xs);
 }
 
 .closeButton {
