@@ -5,9 +5,16 @@ export const PROJECTS = [
     title: "Count Your Bites",
     description:
       "Self-hosted calorie and macro tracker with custom nutrition targets, analytics, and session auth.",
-    tags: ["Svelte 5", "SvelteKit", "TypeScript", "SQLite", "Drizzle ORM", "Better Auth"],
+    tags: [
+      "Svelte 5",
+      "SvelteKit",
+      "TypeScript",
+      "SQLite",
+      "Drizzle ORM",
+      "Better Auth",
+    ],
     cardSize: "large", // Spans 8 columns, 2 rows
-    url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
+    url: "/images/projects/cyb-cover.webp",
     altText: "Screenshot of the Count Your Bites web application",
     overview: [
       "Count Your Bites is a self-hosted fullstack calorie and macro-tracking web application built with Svelte 5 and SvelteKit. Users can configure custom nutrition targets and monitor daily intake.",
@@ -16,8 +23,13 @@ export const PROJECTS = [
     images: [
       {
         order: 1,
-        url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
-        altText: "Cover image for Count Your Bites",
+        url: "/images/projects/cyb-dashboard.webp",
+        altText: "Dashboard of Count Your Bites",
+      },
+      {
+        order: 2,
+        url: "/images/projects/cyb-settings.webp",
+        altText: "Settings page of Count Your Bites",
       },
     ],
     links: [
@@ -69,9 +81,17 @@ export const PROJECTS = [
     title: "CV Website",
     description:
       "Zero-dependency static CV with print-ready A4 styling, client-side sorting, and Docker/Kamal deployment.",
-    tags: ["HTML", "CSS", "JavaScript", "Print Styles", "Nginx", "Docker", "Kamal"],
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Print Styles",
+      "Nginx",
+      "Docker",
+      "Kamal",
+    ],
     cardSize: "default", // Spans 4 columns, 1 row
-    url: "https://placehold.co/400x400/1e293b/ffffff?text=CV+Website",
+    url: "/images/projects/cv-cover.webp",
     altText: "Preview of the CV Website",
     overview: [
       "Built as a zero-dependency static site using semantic HTML, a single token-driven vanilla stylesheet, and progressive-enhancement JavaScript—no build step required. Dedicated @page and @media print rules pair with a one-click download button to format the page cleanly as a printable A4 resume.",
@@ -80,8 +100,13 @@ export const PROJECTS = [
     images: [
       {
         order: 1,
-        url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
-        altText: "Cover image for the CV Website",
+        url: "/images/projects/cv-full.webp",
+        altText: "CV website in full",
+      },
+      {
+        order: 2,
+        url: "/images/projects/cv-print.webp",
+        altText: "Print of CV website",
       },
     ],
     links: [
@@ -101,7 +126,13 @@ export const PROJECTS = [
     title: "TooDoo",
     description:
       "C#/.NET 10 terminal task manager with color-coded due dates, sorting, and crash-safe JSON storage.",
-    tags: ["C#", ".NET 10", "Console App", "JSON Persistence", "Clean Architecture"],
+    tags: [
+      "C#",
+      ".NET 10",
+      "Console App",
+      "JSON Persistence",
+      "Clean Architecture",
+    ],
     cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Terminal window running the TooDoo C# console task manager",
