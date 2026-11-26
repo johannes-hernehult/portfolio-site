@@ -45,7 +45,6 @@ export function Contact() {
           <input
             type="email"
             name="email"
-            id="email"
             placeholder="example@mail.com"
             autoComplete="email"
             required
@@ -56,7 +55,6 @@ export function Contact() {
           <input
             type="text"
             name="name"
-            id="name"
             placeholder="My Name"
             autoComplete="name"
             required
@@ -66,7 +64,6 @@ export function Contact() {
           Message
           <textarea
             name="message"
-            id="message"
             placeholder="Write your message here..."
             required
           ></textarea>
@@ -75,15 +72,14 @@ export function Contact() {
         <button type="submit" className="btn" disabled={isSending}>
           <span>{isSending ? "Sending..." : "Send"}</span>
         </button>
-        {feedback && (
-          <p
-            className={styles.feedback}
-            data-type={feedback.type}
-            role={feedback.type === "error" ? "alert" : "status"}
-          >
-            {feedback.message}
-          </p>
-        )}
+        <p
+          className={styles.feedback}
+          data-type={feedback?.type}
+          role="status"
+          aria-live="polite"
+        >
+          {feedback?.message}
+        </p>
       </form>
     </section>
   );
