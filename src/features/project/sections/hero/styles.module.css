@@ -27,10 +27,6 @@
     list-style: none;
 }
 
-.links a {
-    text-transform: capitalize;
-}
-
 .tags {
     position: absolute;
     bottom: var(--size-md);

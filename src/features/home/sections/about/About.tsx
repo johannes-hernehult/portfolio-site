@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-export default function About() {
+export function About() {
   return (
     <section id="about" className={styles.about}>
       <h2>About</h2>

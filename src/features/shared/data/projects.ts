@@ -48,10 +48,12 @@ export const PROJECTS: Project[] = [
     links: [
       {
         type: "live",
+        label: "Live",
         url: "https://cyb.jhernehult.com/",
       },
       {
-        type: "Source Code",
+        type: "repo",
+        label: "Repo",
         url: "https://git.jhernehult.com/johannes-hernehult/count-your-bites",
       },
     ],
@@ -114,10 +116,12 @@ export const PROJECTS: Project[] = [
     links: [
       {
         type: "live",
+        label: "Live",
         url: "https://jhernehult.com/",
       },
       {
         type: "repo",
+        label: "Repo",
         url: "https://github.com/johannes-hernehult/portfolio-site",
       },
     ],
@@ -162,12 +166,14 @@ export const PROJECTS: Project[] = [
     ],
     links: [
       {
-        type: "repo",
-        url: "https://github.com/johannes-hernehult/cv-website",
+        type: "live",
+        label: "Live",
+        url: "https://cv.jhernehult.com/",
       },
       {
-        type: "live",
-        url: "https://cv.jhernehult.com/",
+        type: "repo",
+        label: "Repo",
+        url: "https://github.com/johannes-hernehult/cv-website",
       },
     ],
   },
@@ -201,6 +207,7 @@ export const PROJECTS: Project[] = [
     links: [
       {
         type: "repo",
+        label: "Repo",
         url: "https://github.com/johannes-hernehult/todo_app-too_doo",
       },
     ],

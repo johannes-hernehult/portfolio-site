@@ -35,7 +35,7 @@
     line-height: 1.25;
 }
 
-.description {
+.organization {
     margin-bottom: var(--size-2xs);
     color: var(--color-text-dark);
     font-size: var(--size-md);

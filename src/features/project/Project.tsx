@@ -1,10 +1,10 @@
 import { useParams } from "react-router";
-import Hero from "./sections/hero/Hero";
+import { ProjectHero } from "./sections/hero/ProjectHero";
 import { PROJECTS } from "../shared/data/projects";
 import { Contact } from "../shared/components/contact";
 import { NotFound } from "../shared/components/not-found";
 import { Gallery } from "./sections/gallery/Gallery";
-import Overview from "./sections/overview/Overview";
+import { Overview } from "./sections/overview/Overview";
 
 export function Project() {
   const { slug } = useParams();
@@ -13,7 +13,7 @@ export function Project() {
 
   return (
     <main>
-      <Hero project={project} />
+      <ProjectHero project={project} />
       <Overview project={project} />
       <Gallery project={project} />
       {/*Add a section of related projects or similare projects here*/}

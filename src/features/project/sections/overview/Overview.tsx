@@ -4,7 +4,7 @@ type OverviewProps = {
   project: Project;
 };
 
-export default function Overview({ project }: OverviewProps) {
+export function Overview({ project }: OverviewProps) {
   const paragraphs = project.overview.map((paragraph) => (
     <p key={paragraph}>{paragraph}</p>
   ));

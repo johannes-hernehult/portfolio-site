@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { Link } from "react-router";
 import { SocialLinks } from "../../../shared/components/social-links/SocialLinks";
 
-export default function Hero() {
+export function HomeHero() {
   return (
     <section className={styles.hero}>
       <h1>Lorem ipsum dolor sit.</h1>

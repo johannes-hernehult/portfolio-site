@@ -5,7 +5,8 @@ export type ProjectImage = {
 };
 
 export type ProjectLink = {
-  type: string;
+  type: "live" | "repo";
+  label: string;
   url: string;
 };
 
@@ -27,7 +28,7 @@ export type Experience = {
   id: number;
   slug: string;
   title: string;
-  description: string;
+  organization: string;
   type: "education" | "work";
   from: number;
   to: number;

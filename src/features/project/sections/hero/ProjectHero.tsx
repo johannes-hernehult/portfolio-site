@@ -1,11 +1,11 @@
 import type { Project } from "../../../shared/types";
 import styles from "./styles.module.css";
 
-export default function Hero({ project }: { project: Project }) {
+export function ProjectHero({ project }: { project: Project }) {
   const links = project.links.map((link) => (
     <li key={link.url}>
       <a href={link.url} target="_blank" rel="noreferrer" className="btn">
-        <span>{link.type}</span>
+        <span>{link.label}</span>
       </a>
     </li>
   ));

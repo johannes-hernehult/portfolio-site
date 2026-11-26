@@ -7,7 +7,7 @@ function formatDateRange(from: number, to: number) {
 }
 
 function ExperienceCard({ experience }: { experience: Experience }) {
-  const { title, description, from, to, highlights, technologies } = experience;
+  const { title, organization, from, to, highlights, technologies } = experience;
 
   return (
     <li className={styles.card}>
@@ -16,7 +16,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
         <span className={styles.date}>{formatDateRange(from, to)}</span>
       </div>
 
-      <p className={styles.description}>{description}</p>
+      <p className={styles.organization}>{organization}</p>
 
       {highlights.length > 0 && (
         <ul className={styles.highlights}>
@@ -39,7 +39,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   );
 }
 
-export default function Experience() {
+export function Experience() {
   return (
     <section id="experience" className={styles.experience}>
       <h2>Experience</h2>

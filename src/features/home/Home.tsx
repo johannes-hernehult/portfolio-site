@@ -1,13 +1,13 @@
-import Hero from "./sections/hero/Hero";
-import Projects from "./sections/projects/Projects";
-import Experience from "./sections/experience/Experience";
-import About from "./sections/about/About";
+import { HomeHero } from "./sections/hero/HomeHero";
+import { Projects } from "./sections/projects/Projects";
+import { Experience } from "./sections/experience/Experience";
+import { About } from "./sections/about/About";
 import { Contact } from "../shared/components/contact";
 
 export function Home() {
   return (
     <main>
-      <Hero />
+      <HomeHero />
       <Projects />
       <Experience />
       <About />
