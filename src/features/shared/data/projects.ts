@@ -68,8 +68,8 @@ export const PROJECTS: Project[] = [
     url: "/images/projects/portfolio-hero.webp",
     altText: "Cover image of Portfolio Website",
     overview: [
-      "When architecting responsive interfaces, fluid grid tracks and custom CSS properties allow components to adapt seamlessly across viewport breakpoints without brittle media-query overrides. By decoupling design tokens from structural markup, teams can iterate on typography, spacing scales, and accessible focus states while maintaining zero layout shift during asynchronous hydration.",
-      "Refactoring legacy state management into modular hooks eliminates prop-drilling bottlenecks and keeps render cycles predictable across deeply nested component trees.",
+      "A personal portfolio built with React, TypeScript, and CSS Modules on top of a custom design-token stylesheet—no third-party UI or CSS frameworks. A fixed sidebar on desktop collapses into a sticky top navigation bar on smaller screens, paired with a dense 12-column project grid and scroll-spy section tracking.",
+      "The codebase follows a feature-based structure with route-level code splitting and hover/focus prefetching for project pages. Custom hooks handle session-backed scroll restoration, native <dialog> lightbox navigation with keyboard and reduced-motion support, and async form submissions through EmailJS.",
     ],
     images: [
       {
