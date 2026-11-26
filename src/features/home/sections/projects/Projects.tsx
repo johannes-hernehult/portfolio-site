@@ -36,7 +36,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className={styles.projects}>
-      <h2>Selected Work</h2>
+      <h2>Projects</h2>
       <ul className={styles.list}>{projectItems}</ul>
     </section>
   );
