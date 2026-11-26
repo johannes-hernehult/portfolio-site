@@ -128,4 +128,9 @@
     .grid li:first-of-type:not(:only-child) {
         grid-column: 1 / -1;
     }
+
+    .grid img {
+        height: auto;
+        object-fit: contain;
+    }
 }
