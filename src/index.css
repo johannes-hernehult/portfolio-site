@@ -131,7 +131,7 @@ textarea {
     --radius-lg: var(--size-md);
     --border-muted: 1px solid var(--color-border-muted);
     --sidebar-width: 300px;
-    --scroll-margin: var(--size-lg);
+    --scroll-margin: var(--size-3xl);
 
     /* Motion */
     --transition-fast: 150ms cubic-bezier(0.22, 1, 0.36, 1);
