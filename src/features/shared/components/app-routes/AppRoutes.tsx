@@ -3,7 +3,7 @@ import { Home } from "../../../home";
 import { Project } from "../../../project";
 import { NotFound } from "../not-found";
 
-export function Router() {
+export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
