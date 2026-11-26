@@ -1,13 +1,14 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import styles from "./styles.module.css";
 import { PROJECTS } from "../../../shared/data/projects";
-import { PROJECT_RETURN_SCROLL_KEY } from "../../../shared/hooks/useScrollToRef";
+import { saveProjectReturnScroll } from "../../../shared/hooks/useScrollToRef";
 
 export default function Projects() {
+  const location = useLocation();
   const projectItems = PROJECTS.map((project) => (
     <li
       key={project.id}
-      className={`${styles.card} ${styles[project.cardSize] || ""}`}
+      className={`${styles.card} ${project.cardSize ? styles[project.cardSize] : ""}`}
       style={{ backgroundImage: `url(${project.url})` }}
     >
       <Link
@@ -21,10 +22,7 @@ export default function Projects() {
             !event.shiftKey &&
             !event.altKey
           ) {
-            sessionStorage.setItem(
-              PROJECT_RETURN_SCROLL_KEY,
-              String(window.scrollY),
-            );
+            saveProjectReturnScroll(location.key, window.scrollY);
           }
         }}
         className={styles.link}

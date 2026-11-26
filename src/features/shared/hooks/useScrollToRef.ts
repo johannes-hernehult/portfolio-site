@@ -1,20 +1,46 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation, useNavigationType } from "react-router";
 
-export const PROJECT_RETURN_SCROLL_KEY = "project-return-scroll-y";
+export function saveProjectReturnScroll(locationKey: string, scrollY: number) {
+  try {
+    window.sessionStorage.setItem(
+      `project-return-scroll:${locationKey}`,
+      String(scrollY),
+    );
+  } catch {
+    // Storage can be unavailable; navigation should still work.
+  }
+}
+
+export function readProjectReturnScroll(locationKey: string) {
+  try {
+    return window.sessionStorage.getItem(`project-return-scroll:${locationKey}`);
+  } catch {
+    return null;
+  }
+}
 
 export function useScrollToRef() {
   const { pathname, hash, key } = useLocation();
   const navigationType = useNavigationType();
+  const previousPathname = useRef<string | null>(null);
+  const lastHandledLocationKey = useRef<string | null>(null);
 
   useEffect(() => {
+    if (lastHandledLocationKey.current === key) {
+      return;
+    }
+    lastHandledLocationKey.current = key;
+
+    const pathnameChanged = previousPathname.current !== pathname;
+    previousPathname.current = pathname;
+
     if (pathname === "/" && navigationType === "POP") {
-      const savedScrollY = sessionStorage.getItem(PROJECT_RETURN_SCROLL_KEY);
+      const savedScrollY = readProjectReturnScroll(key);
       if (savedScrollY !== null) {
-        sessionStorage.removeItem(PROJECT_RETURN_SCROLL_KEY);
         const scrollY = Number(savedScrollY);
         if (Number.isFinite(scrollY)) {
-          window.scrollTo(0, scrollY);
+          window.scrollTo({ top: scrollY, behavior: "instant" });
           return;
         }
       }
@@ -34,10 +60,16 @@ export function useScrollToRef() {
             scrollMarginTop,
         );
 
-        window.scrollTo({ top: destination, behavior: "smooth" });
+        window.scrollTo({
+          top: destination,
+          behavior: pathnameChanged ? "instant" : "smooth",
+        });
       }
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: pathnameChanged ? "instant" : "smooth",
+      });
     }
   }, [pathname, hash, key, navigationType]);
 }
