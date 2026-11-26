@@ -42,18 +42,12 @@ export function useActiveSection(sectionIds: readonly string[]) {
     const updateActiveSection = () => {
       cancelAnimationFrame(animationFrame);
       animationFrame = requestAnimationFrame(() => {
-        const activationPoint = window.innerHeight * 0.25;
+        const activationPoint = window.innerHeight * 0.30;
         const pendingId = pendingTargetId.current;
-        if (pendingId) {
-          const pendingSection = sections.find(({ id }) => id === pendingId);
-          if (
-            pendingSection &&
-            pendingSection.element.getBoundingClientRect().top > activationPoint
-          ) {
-            return;
-          }
-          pendingTargetId.current = null;
+        if (pendingId && sections.some(({ id }) => id === pendingId)) {
+          return;
         }
+        pendingTargetId.current = null;
 
         const sectionPositions = sections.map(({ id, element }) => ({
           id,
