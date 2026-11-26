@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import styles from "./styles.module.css";
 import { PROJECTS } from "../../../shared/data/projects";
+import { loadProjectPage } from "../../../shared/lib/loadProjectPage";
 import {
   PROJECT_LINK_STATE,
   useRememberHomeScroll,
@@ -18,6 +19,8 @@ export function Projects() {
         to={`/project/${project.slug}`}
         state={PROJECT_LINK_STATE}
         onClick={rememberHomeScroll}
+        onPointerEnter={() => void loadProjectPage().catch(() => {})}
+        onFocus={() => void loadProjectPage().catch(() => {})}
         className={styles.link}
       >
         <h3>{project.title}</h3>
