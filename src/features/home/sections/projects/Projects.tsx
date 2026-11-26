@@ -12,8 +12,8 @@ export function Projects() {
     <li
       key={project.id}
       className={`${styles.card} ${project.cardSize ? styles[project.cardSize] : ""}`}
-      style={{ backgroundImage: `url(${project.url})` }}
     >
+      <img src={project.url} alt="" loading="lazy" decoding="async" />
       <Link
         to={`/project/${project.slug}`}
         state={PROJECT_LINK_STATE}
@@ -26,7 +26,7 @@ export function Projects() {
   ));
 
   return (
-    <section id="projects" className={styles.projects}>
+    <section id="projects" className="content-section">
       <h2>Projects</h2>
       <ul className={styles.list}>{projectItems}</ul>
     </section>
