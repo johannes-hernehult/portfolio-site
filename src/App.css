@@ -18,7 +18,7 @@ main > section {
     padding: var(--size-xl);
 }
 
-main > section:not(:first-of-type) {
+main > .content-section {
     width: 100%;
     max-width: 1080px;
     display: flex;
@@ -27,7 +27,7 @@ main > section:not(:first-of-type) {
 }
 
 section[id] {
-    scroll-margin-top: var(--size-lg);
+    scroll-margin-top: var(--scroll-margin);
 }
 
 footer {
@@ -53,16 +53,12 @@ footer {
         padding: var(--size-md);
     }
 
-    main > section:not(:first-of-type) {
+    main > .content-section {
         max-width: 100%;
     }
 
     footer {
         height: var(--size-2xl);
         margin-left: 0;
-    }
-
-    section[id] {
-        scroll-margin-top: 130px;
     }
 }
