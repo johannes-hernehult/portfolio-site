@@ -10,10 +10,10 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   const { title, organization, from, to, highlights, technologies } = experience;
 
   return (
-    <li className={styles.card}>
+    <li className={`${styles.card} surface-card`}>
       <div className={styles.header}>
         <h3>{title}</h3>
-        <span className={styles.date}>{formatDateRange(from, to)}</span>
+        <span className={`${styles.date} pill`}>{formatDateRange(from, to)}</span>
       </div>
 
       <p className={styles.organization}>{organization}</p>
@@ -29,7 +29,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
       {technologies.length > 0 && (
         <ul className={styles.techList} aria-label="Technologies used">
           {technologies.map((tech) => (
-            <li key={tech} className={styles.techTag}>
+            <li key={tech} className="pill">
               {tech}
             </li>
           ))}
@@ -41,7 +41,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
 
 export function Experience() {
   return (
-    <section id="experience" className={styles.experience}>
+    <section id="experience" className="content-section">
       <h2>Experience</h2>
       <ul className={styles.list}>
         {EXPERIENCES.map((experience) => (

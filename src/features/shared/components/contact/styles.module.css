@@ -39,7 +39,7 @@
 .form textarea:focus-visible {
     outline: none;
     border-color: var(--color-border-accent);
-    box-shadow: 0 0 0 2px hsla(38, 92%, 50%, 0.18);
+    box-shadow: 0 0 0 2px hsl(var(--accent-hsl) / 0.18);
 }
 
 .form textarea {

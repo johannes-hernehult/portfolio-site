@@ -14,10 +14,6 @@
     gap: var(--size-sm);
     padding: var(--size-lg);
     overflow: hidden;
-    border: var(--border-muted);
-    border-radius: var(--radius-md);
-    background: var(--surface-card);
-    box-shadow: var(--shadow-card);
 }
 
 .header {
@@ -75,17 +71,6 @@
     margin: auto 0 0;
     padding: var(--size-sm) 0 0;
     list-style: none;
-}
-
-.techTag,
-.date {
-    padding: var(--size-2xs) var(--size-sm);
-    background-color: var(--color-bg);
-    border: var(--border-muted);
-    border-radius: var(--radius-lg);
-    color: var(--color-text-dark);
-    font-size: var(--size-md);
-    line-height: 1.2;
 }
 
 .date {

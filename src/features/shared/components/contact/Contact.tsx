@@ -37,7 +37,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className={styles.contact}>
+    <section id="contact" className="content-section">
       <h2>Let's get in touch</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label>

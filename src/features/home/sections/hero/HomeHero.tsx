@@ -5,7 +5,7 @@ import { SocialLinks } from "../../../shared/components/social-links/SocialLinks
 
 export function HomeHero() {
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} page-hero`}>
       <h1>Lorem ipsum dolor sit.</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste nihil
