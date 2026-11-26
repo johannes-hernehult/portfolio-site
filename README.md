@@ -30,3 +30,24 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## Deployment
+
+This app is deployed with Kamal and served by nginx from the Docker image. Before deploying:
+
+- Point the `A` record for `jhernehult.com` to `62.238.34.82` and allow inbound SSH on port `1995` plus HTTP/HTTPS (ports `80` and `443`).
+- Make the three Vite EmailJS values available to Kamal when building. They are embedded in the client-side bundle, so they are public values, not secrets:
+  - `VITE_EMAILJS_SERVICE_ID`
+  - `VITE_EMAILJS_TEMPLATE_ID`
+  - `VITE_EMAILJS_PUBLIC_KEY`
+
+If these are in your local `.env` file, load them into the shell before each Kamal command:
+
+```sh
+set -a
+. ./.env
+set +a
+kamal setup # first deployment
+```
+
+For later releases, run `kamal deploy` from a shell with those values loaded. The deployment configuration is in `config/deploy.yml`; nginx serves the built SPA on port `8080` and answers Kamal's health check at `/up`.
