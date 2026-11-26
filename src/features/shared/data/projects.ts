@@ -4,7 +4,7 @@ export const PROJECTS = [
     slug: "count-your-bites",
     title: "Count Your Bites",
     description:
-      "Fullstack calorie and macro-tracking web app with nutrition targets, analytics, and session authentication.",
+      "Self-hosted calorie and macro tracker with custom nutrition targets, analytics, and session auth.",
     tags: ["Svelte 5", "SvelteKit", "TypeScript", "SQLite", "Drizzle ORM", "Better Auth"],
     cardSize: "large", // Spans 8 columns, 2 rows
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
@@ -36,7 +36,7 @@ export const PROJECTS = [
     slug: "portfolio-website",
     title: "Portfolio Website",
     description:
-      "A responsive personal portfolio built with React, TypeScript, and CSS Modules.",
+      "Responsive developer portfolio built with React, TypeScript, CSS Modules, and fluid grid layouts.",
     tags: ["React", "TypeScript", "CSS Modules", "Responsive Design"],
     cardSize: "default", // Spans 4 columns, 1 row
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
@@ -68,7 +68,7 @@ export const PROJECTS = [
     slug: "cv-website",
     title: "CV Website",
     description:
-      "Zero-dependency static CV site with print-ready A4 styling, client-side sorting, and Docker/Kamal deployment.",
+      "Zero-dependency static CV with print-ready A4 styling, client-side sorting, and Docker/Kamal deployment.",
     tags: ["HTML", "CSS", "JavaScript", "Print Styles", "Nginx", "Docker", "Kamal"],
     cardSize: "default", // Spans 4 columns, 1 row
     url: "https://placehold.co/400x400/1e293b/ffffff?text=CV+Website",
@@ -100,7 +100,7 @@ export const PROJECTS = [
     slug: "too-doo",
     title: "TooDoo",
     description:
-      "Layered C#/.NET 10 console task manager with color-coded due dates, sorting, and crash-safe JSON persistence.",
+      "C#/.NET 10 terminal task manager with color-coded due dates, sorting, and crash-safe JSON storage.",
     tags: ["C#", ".NET 10", "Console App", "JSON Persistence", "Clean Architecture"],
     cardSize: "wide", // Spans 6 columns
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
