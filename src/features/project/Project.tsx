@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import styles from "./styles.module.css";
 import Hero from "./sections/hero/Hero";
 import { PROJECTS } from "../shared/data/projects";
 import { Contact } from "../shared/components/contact";
@@ -12,7 +11,7 @@ export function Project() {
   if (!project) return null;
 
   return (
-    <main className={styles.project}>
+    <main>
       <Hero project={project} />
       <Overview project={project} />
       <Gallery project={project} />

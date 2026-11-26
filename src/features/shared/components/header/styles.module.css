@@ -8,6 +8,7 @@
     width: 100%;
     max-width: var(--sidebar-width);
     background-color: var(--color-bg-dark);
+    border-right: var(--border-muted);
 }
 
 .brand {
@@ -16,13 +17,13 @@
     padding: var(--size-xl) var(--size-md);
     background: var(--gradient-accent);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-size: var(--size-xl);
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
     text-decoration: none;
-    -webkit-background-clip: text;
 }
 
 .brand::after {
@@ -47,7 +48,7 @@
         bottom: auto;
         max-width: 100%;
         z-index: 10;
-        background-color: var(--color-bg-dark);
+        border-right: none;
     }
 
     .brand {

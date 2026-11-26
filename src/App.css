@@ -1,13 +1,17 @@
 #root {
-    height: 100%;
-    min-height: 100dvh;
     min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    height: 100%;
-    min-height: calc(100vh - var(--size-3xl));
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3xl);
     margin-left: var(--sidebar-width);
+    padding-bottom: var(--size-2xl);
 }
 
 main > section {
@@ -15,48 +19,47 @@ main > section {
 }
 
 main > section:not(:first-of-type) {
+    width: 100%;
     max-width: 1080px;
     display: flex;
     flex-direction: column;
     gap: var(--size-lg);
 }
 
+section[id] {
+    scroll-margin-top: var(--size-lg);
+}
+
 footer {
     height: var(--size-3xl);
     margin-top: auto;
     margin-left: var(--sidebar-width);
-
     display: grid;
     place-items: center;
-
-    padding-inline: var(--size-md);
-    padding-block: var(--size-xs);
+    padding: var(--size-xs) var(--size-md);
+    border-top: var(--border-muted);
+    color: var(--color-text-dark);
+    font-size: var(--size-md);
 }
 
 @media screen and (max-width: 900px) {
-    #root {
-        display: flex;
-        flex-direction: column;
-    }
-
     main {
         margin-left: 0;
+        gap: var(--size-2xl);
+        padding-bottom: var(--size-xl);
     }
 
     main > section {
         padding: var(--size-md);
     }
 
+    main > section:not(:first-of-type) {
+        max-width: 100%;
+    }
+
     footer {
         height: var(--size-2xl);
         margin-left: 0;
-        margin-top: var(--size-sm);
-
-        color: var(--color-text-dark);
-    }
-
-    main > section:not(:first-of-type) {
-        max-width: 100%;
     }
 
     section[id] {

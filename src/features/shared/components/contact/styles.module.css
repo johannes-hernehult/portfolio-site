@@ -2,40 +2,49 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--size-md);
-    max-width: 80ch;
+    max-width: 72ch;
 }
 
 .form label {
     display: flex;
     flex-direction: column;
-    gap: var(--size-3xs);
-    font-size: var(--size-sm);
-    color: var(--color-text-muted);
-    font-weight: bold;
+    gap: var(--size-2xs);
+    font-size: var(--size-md);
+    color: var(--color-text-dark);
+    font-weight: 600;
 }
 
 .form input,
 .form textarea {
-    letter-spacing: 0.05em;
+    letter-spacing: 0.015em;
     padding-inline: var(--size-sm);
     padding-block: var(--size-xs);
     font-size: var(--size-md);
     border-radius: var(--radius-md);
-    background: linear-gradient(145deg, var(--color-bg-light), var(--color-bg));
+    background: var(--surface-card);
     color: var(--color-text);
-    resize: none;
     border: var(--border-muted);
-    font-weight: normal;
+    font-weight: 400;
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
 }
 
-.form input:focus,
-.form textarea:focus {
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.form input:focus-visible,
+.form textarea:focus-visible {
     outline: none;
     border-color: var(--color-border-accent);
+    box-shadow: 0 0 0 2px hsla(38, 92%, 50%, 0.18);
 }
 
 .form textarea {
-    height: 200px;
+    min-height: 180px;
+    resize: vertical;
 }
 
 .form label:has(textarea) {
@@ -47,51 +56,9 @@
     flex-grow: 1;
 }
 
-.form button.submitButton {
-    display: inline-flex;
-    min-height: 44px;
-    align-items: center;
-    justify-content: center;
-    padding-inline: var(--size-lg);
-    padding-block: var(--size-xs);
-    border: var(--size-3xs) solid var(--color-accent);
-    border-radius: var(--radius-md);
-    appearance: none;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    font-weight: bold;
-    line-height: 1;
-    cursor: pointer;
-    transition:
-        transform 160ms ease,
-        box-shadow 160ms ease,
-        background-color 160ms ease;
-}
-
-.form button.submitButton span {
-    background: var(--gradient-accent);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-}
-
-.form button.submitButton:hover {
-    border-color: var(--color-accent);
-    background: var(--color-accent);
-
-    span {
-        background: none;
-        color: var(--color-bg-dark);
-    }
-}
-
-.form button.submitButton:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-.form button.submitButton:focus-visible {
-    outline: 2px solid var(--color-accent-light);
-    outline-offset: var(--size-2xs);
+.feedback {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--color-text-dark);
+    font-size: var(--size-md);
 }

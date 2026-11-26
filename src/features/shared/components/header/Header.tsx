@@ -5,7 +5,6 @@ import { useScrollToRef } from "../../hooks/useScrollToRef";
 
 export function Header() {
   useScrollToRef();
-
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.brand}>

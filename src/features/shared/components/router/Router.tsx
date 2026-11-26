@@ -7,7 +7,16 @@ export function Router() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/project/:slug" element={<Project />} />
-      <Route path="*" element={<main>404 - Not found</main>} />
+      <Route
+        path="*"
+        element={
+          <main>
+            <section>
+              <h1>404 - Not found</h1>
+            </section>
+          </main>
+        }
+      />
     </Routes>
   );
 }
