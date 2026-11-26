@@ -1,6 +1,12 @@
-export default function Overview({ project }) {
+import type { Project } from "../../../shared/types";
+
+type OverviewProps = {
+  project: Project;
+};
+
+export default function Overview({ project }: OverviewProps) {
   const paragraphs = project.overview.map((paragraph) => (
-    <p key={paragraph.slice(0, 20)}>{paragraph}</p>
+    <p key={paragraph}>{paragraph}</p>
   ));
 
   return (

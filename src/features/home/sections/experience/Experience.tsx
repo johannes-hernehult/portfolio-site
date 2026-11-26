@@ -1,11 +1,12 @@
 import { EXPERIENCES } from "../../../shared/data/experiences";
+import type { Experience } from "../../../shared/types";
 import styles from "./styles.module.css";
 
-function formatDateRange(from, to) {
+function formatDateRange(from: number, to: number) {
   return from === to ? String(from) : `${from} – ${to}`;
 }
 
-function ExperienceCard({ experience }) {
+function ExperienceCard({ experience }: { experience: Experience }) {
   const { title, description, from, to, highlights, technologies } = experience;
 
   return (

@@ -1,4 +1,7 @@
-export const PROJECTS = [
+import type { Project } from "../types";
+
+// An omitted cardSize means the default 4-column card.
+export const PROJECTS: Project[] = [
   {
     id: 1,
     slug: "count-your-bites",
@@ -60,7 +63,6 @@ export const PROJECTS = [
     description:
       "Responsive developer portfolio built with React, TypeScript, CSS Modules, and fluid grid layouts.",
     tags: ["React", "TypeScript", "CSS Modules", "Responsive Design"],
-    cardSize: "default", // Spans 4 columns, 1 row
     url: "/images/projects/portfolio-hero.webp",
     altText: "Cover image of Portfolio Website",
     overview: [
@@ -135,7 +137,6 @@ export const PROJECTS = [
       "Docker",
       "Kamal",
     ],
-    cardSize: "default", // Spans 4 columns, 1 row
     url: "/images/projects/cv-profile-skills.webp",
     altText: "Cover image of CV website",
     overview: [

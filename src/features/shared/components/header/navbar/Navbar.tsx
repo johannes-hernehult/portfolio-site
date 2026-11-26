@@ -3,12 +3,12 @@ import { useActiveSection } from "../../../hooks/useActiveSection";
 import { SocialLinks } from "../../social-links/SocialLinks";
 import styles from "./styles.module.css";
 
-const sections = [
+const sections: ReadonlyArray<{ id: string; label: string }> = [
   { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
   { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
-] as const;
+];
 
 const sectionIds = sections.map(({ id }) => id);
 
@@ -18,9 +18,12 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   if (location.pathname.startsWith("/project/")) {
-    const cameFromHome = (
-      location.state as { fromHome?: boolean } | null
-    )?.fromHome;
+    const routeState: unknown = location.state;
+    const cameFromHome =
+      typeof routeState === "object" &&
+      routeState !== null &&
+      "fromHome" in routeState &&
+      Boolean(routeState.fromHome);
 
     return (
       <nav className={styles.nav} aria-label="Project navigation">

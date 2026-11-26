@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const profiles = [
+const profiles: ReadonlyArray<{ label: string; url: string }> = [
   {
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/johannes-hernehult/",
@@ -13,7 +13,7 @@ const profiles = [
     label: "git.jhernehult.com",
     url: "https://git.jhernehult.com/johannes-hernehult",
   },
-] as const;
+];
 
 type SocialLinksProps = {
   placement: "hero" | "navbar";

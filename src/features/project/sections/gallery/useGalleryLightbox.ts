@@ -7,7 +7,7 @@ import {
 } from "react";
 import { useScrollLock } from "./useScrollLock";
 
-export function useGalleryLightbox<Image>(images: readonly Image[]) {
+export function useGalleryLightbox<T>(images: readonly T[]) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const selectedImage =
     selectedIndex === null ? null : (images[selectedIndex] ?? null);

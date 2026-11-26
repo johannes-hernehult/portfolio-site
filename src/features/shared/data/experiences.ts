@@ -1,4 +1,6 @@
-export const EXPERIENCES = [
+import type { Experience } from "../types";
+
+export const EXPERIENCES: Experience[] = [
   {
     id: 1,
     slug: "fullstack-dotnet-developer",
