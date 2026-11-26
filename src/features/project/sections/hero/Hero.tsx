@@ -23,7 +23,7 @@ export default function Hero({ project }: { project: Project }) {
       className={styles.hero}
       style={{
         backgroundImage: project.url
-          ? `linear-gradient(180deg, rgba(10, 10, 14, 0.56) 0%, rgba(10, 10, 14, 0.84) 100%), url("${project.url}")`
+          ? `linear-gradient(180deg, rgba(10, 10, 14, 0.75) 0%, rgba(10, 10, 14, 0.95) 100%), url("${project.url}")`
           : undefined,
       }}
     >
