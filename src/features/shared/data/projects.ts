@@ -23,13 +23,23 @@ export const PROJECTS = [
     images: [
       {
         order: 1,
-        url: "/images/projects/cyb-dashboard.webp",
-        altText: "Dashboard of Count Your Bites",
+        url: "/images/projects/cyb-dashboard-1.webp",
+        altText: "Dashboard",
       },
       {
         order: 2,
-        url: "/images/projects/cyb-settings.webp",
-        altText: "Settings page of Count Your Bites",
+        url: "/images/projects/cyb-dashboard-2.webp",
+        altText: "Dashboard weekly average",
+      },
+      {
+        order: 3,
+        url: "/images/projects/cyb-delete-modal.webp",
+        altText: "Delete an entry modal",
+      },
+      {
+        order: 2,
+        url: "/images/projects/cyb-settings-user-profile.webp",
+        altText: "User profile section of settings page",
       },
     ],
     links: [
