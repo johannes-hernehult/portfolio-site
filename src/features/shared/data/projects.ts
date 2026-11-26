@@ -10,7 +10,7 @@ export const PROJECTS = [
     url: "https://placehold.co/800x500/1e293b/ffffff?text=.",
     altText: "Screenshot of the Count Your Bites web application",
     overview: [
-      "Count Your Bites is a self-hosted fullstack calorie and macro-tracking web application built with Svelte 5 and SvelteKit. Users can configure custom nutrition targets and monitor daily intake through streamlined analytics.",
+      "Count Your Bites is a self-hosted fullstack calorie and macro-tracking web application built with Svelte 5 and SvelteKit. Users can configure custom nutrition targets and monitor daily intake.",
       "The backend pairs SQLite and Drizzle ORM with schema migrations, SvelteKit form actions, and server-side validation for type-safe persistence. Authentication is handled via Better Auth with session management, email verification, password reset flows, and API rate limiting.",
     ],
     images: [
@@ -24,6 +24,10 @@ export const PROJECTS = [
       {
         type: "live",
         url: "https://cyb.jhernehult.com/",
+      },
+      {
+        type: "Source Code",
+        url: "https://git.jhernehult.com/johannes-hernehult/count-your-bites",
       },
     ],
   },
@@ -49,6 +53,10 @@ export const PROJECTS = [
       },
     ],
     links: [
+      {
+        type: "live",
+        url: "https://jhernehult.com/",
+      },
       {
         type: "repo",
         url: "https://github.com/johannes-hernehult/portfolio-site",
