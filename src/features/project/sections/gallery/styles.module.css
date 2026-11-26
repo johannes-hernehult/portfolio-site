@@ -128,6 +128,7 @@
     cursor: pointer;
 }
 
+/* Must match MOBILE_VIEW_QUERY in Gallery.tsx (600px). */
 @media screen and (max-width: 600px) {
     .grid li:first-of-type:not(:only-child) {
         grid-column: 1 / -1;

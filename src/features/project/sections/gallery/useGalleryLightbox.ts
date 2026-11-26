@@ -5,7 +5,7 @@ import {
   type KeyboardEvent,
   type MouseEvent,
 } from "react";
-import { useScrollLock } from "./useScrollLock";
+import { useScrollLock } from "../../../shared/hooks/useScrollLock";
 
 export function useGalleryLightbox<T>(images: readonly T[]) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);

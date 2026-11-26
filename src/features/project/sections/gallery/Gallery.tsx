@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useMediaQuery } from "../../../shared/hooks/useMediaQuery";
 import type { Project } from "../../../shared/types";
 import { useGalleryLightbox } from "./useGalleryLightbox";
 import styles from "./styles.module.css";
 
+// Must match the 600px breakpoint in styles.module.css.
 const MOBILE_VIEW_QUERY = "(max-width: 600px)";
 
 type GalleryProps = {
@@ -11,11 +13,7 @@ type GalleryProps = {
 
 export function Gallery({ project }: GalleryProps) {
   const images = [...project.images].sort((a, b) => a.order - b.order);
-  const [isMobile, setIsMobile] = useState(
-    () =>
-      typeof window !== "undefined" &&
-      window.matchMedia(MOBILE_VIEW_QUERY).matches,
-  );
+  const isMobile = useMediaQuery(MOBILE_VIEW_QUERY);
   const {
     closeDialog,
     dialogRef,
@@ -28,14 +26,6 @@ export function Gallery({ project }: GalleryProps) {
     selectedIndex,
   } = useGalleryLightbox(images);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(MOBILE_VIEW_QUERY);
-    const handleChange = (event: MediaQueryListEvent) =>
-      setIsMobile(event.matches);
-
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
 
   useEffect(() => {
     if (isMobile && dialogRef.current?.open) {
